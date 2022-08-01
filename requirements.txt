@@ -2,7 +2,7 @@ aiofiles==0.8.0
 aiosqlite==0.17.0
 anyio==3.4.0
 appdirs==1.4.3
-apturl==0.5.2
+#apturl==0.5.2
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 asgiref==3.5.2
