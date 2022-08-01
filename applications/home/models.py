@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.gis.db import models
-from rest_framework_gis import serializers
+#from rest_framework_gis import serializers
 from django.contrib.auth.models import User
 import datetime
 
@@ -59,12 +59,12 @@ class Marker(models.Model):
         """Return string representation."""
         return self.documentName
 
-class MarkerSerializer(serializers.GeoFeatureModelSerializer):
+"""class MarkerSerializer(serializers.GeoFeatureModelSerializer):
 
     class Meta:
         fields = ("id", "name")
         geo_fields = "location"
-        model = Marker
+        model = Marker"""
 
 class Comment(models.Model):
     QUALITY_PRICE = [
