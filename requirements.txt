@@ -36,7 +36,7 @@ distro==1.4.0
 #distro-info===0.23ubuntu1
 Django==4.0.6
 django-crispy-forms==1.14.0
-django-filter==22.1
+#django-filter==22.1
 #django-geojson==3.2.1
 #djangorestframework==3.13.1
 #djangorestframework-gis==1.0
