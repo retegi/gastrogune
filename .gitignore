@@ -1,0 +1,4 @@
+#Ignoraremos el archivo settings
+*settings.py
+settings.py
+/gastrogune/settings.py

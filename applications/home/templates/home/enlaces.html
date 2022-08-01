@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %}Gastrogune{% endblock %}
+{% block 'content' %}
+
+<div class="row" style="background-color: #fff9f3 ">
+
+  <div class="col-4"></div>
+  <div class="col-lg-4 mx-auto p-3 py-md-5 p-5" id="" style="">
+    <table class="table">
+      <thead>
+        <h1 class="text-center" style="color:brown">Enlaces / Estekak</h1>
+        <tr class="bg-light">
+          <th scope="col">Nombre / Izena</th>
+          <th scope="col">Enlace / Esteka</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        
+        {% for mark in marks %}
+        <tr>
+          <th scope="row"><a target="_blank" href="{% url 'restaurantDetail' mark.id %}" style="text-decoration: none; color: brown;">{{ mark.documentName }}</a></th>
+          <td><a target="_blank" href="{{ mark.web }}" style="color:black; text-decoration:none;">{{ mark.web }}</a></td>
+        </tr>
+        {% endfor %}
+
+        
+      </tbody>
+    </table>
+  </div>
+  <div class="col-4"></div>
+
+</div>
+
+
+  
+
+<script src="{% static 'js/leaflet.ajax.min.js' %}"></script>
+    
+    {% endblock %}
+    

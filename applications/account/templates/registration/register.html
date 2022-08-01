@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block 'title' %}Registro usuari@{% endblock %}
+
+{% block 'content' %}
+
+<div class="row p-5 text-center">
+
+
+  <h1>Nuevo usuari@</h1>
+  {% if form.errors %}
+    <p>
+      Your username and password didn't match.
+      Please try again.
+    </p>
+  {% else %}
+    <p>Utilice el siguiente formulario para registrarse</p>
+  {% endif %}
+  <div class="login-form">
+    <form action="." method="post">
+      {{ user_form.as_p }}
+      {% csrf_token %}
+      <p><input type="submit" value="Crear cuenta"></p>
+    </form>
+    
+  </div>
+
+</div>
+  
+{% endblock %}

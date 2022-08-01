@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %}Gastrogune{% endblock %}
+{% block 'content' %} 
+    <div class="col-lg-12 mx-auto p-3 py-md-5" id="map" style="min-height: 100vh;">
+        
+    </div>
+
+    <script>
+
+        //Configuración del div con el mapa
+        var map = L.map('map').setView([43.0130295,-2.5927695], 9.8);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+        }).addTo(map);
+        /*-------------------------------*/
+
+        //Marca
+        var marker = L.marker([43.0130295,-2.5927695]).addTo(map);
+        //Popup de la marca
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+
+        // Leaflet JS
+        var layer = L.geoJson();
+        map.addLayer(layer);
+        $.getJSON("https://www.opendata.euskadi.eus/contenidos/ds_recursos_turisticos/restaurantes_sidrerias_bodegas/opendata/restaurantes.geojson", function (data) {
+        layer.addData(data);
+
+        var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "amenity": "Baseball Stadium",
+        "popupContent": "This is where the Rockies play!"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-104.99404, 39.75621]
+    }
+};
+
+L.geoJSON(geojsonFeature).addTo(map);
+        
+});
+
+
+/*var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "amenity": "Baseball Stadium",
+        "popupContent": "This is where the Rockies play!"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-104.99404, 39.75621]
+    }
+};
+
+L.geoJSON(geojsonFeature).addTo(map);*/
+
+
+
+var geojsonLayer = new L.GeoJSON.AJAX("https://www.opendata.euskadi.eus/contenidos/ds_recursos_turisticos/restaurantes_sidrerias_bodegas/opendata/restaurantes.geojson");
+alert(geojsonLayer);
+geojsonLayer.addTo(map);
+
+    </script>
+
+<script src="{% static 'js/leaflet.ajax.min.js' %}"></script>
+    
+    {% endblock %}
+    

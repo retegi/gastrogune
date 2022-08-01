@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %}Gastrogune{% endblock %}
+{% block 'content' %}
+
+
+
+<div class="row p-5 text-center">
+
+    <h1>Login</h1>
+<p>Por favor siga el siguiente enlace para loguearte...</p>
+
+<form action="." method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Log in"></p>
+
+</form>
+
+</div>
+
+
+{% endblock %}
