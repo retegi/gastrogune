@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block 'title' %}Log-in{% endblock %}
+{% block 'title' %}Login{% endblock %}
 
 {% block 'content' %}
 
@@ -14,8 +14,8 @@
       Inténtelo de nuevo / Berriz saiatu
     </p>
   {% else %}
-    <p>Utilice el siguiente formulario para logearte, si no tiene una cuente registrese aquí: <a href="{% url 'register' %}">Resitrarse</a></p>
-    <p>Urrengo formularioa erabili ezazu saioa hasteko, erabiltzaile konturik ez baduzu, sortu bat: <a href="{% url 'register' %}">Erregistratu</a></p>
+    <p>Utiliza el siguiente formulario para logearte, si no tiene una cuenta regístrate aquí: <a href="{% url 'register' %}">Registrarse</a></p>
+    <p>Urrengo formularioa erabili ezazu saioa hasteko, erabiltzaile konturik ez baduzu, sortu ezazu bat: <a href="{% url 'register' %}">Erregistratu</a></p>
   {% endif %}
   <div class="login-form">
     <form action="{% url 'login' %}" method="post">

@@ -120,10 +120,19 @@
 
         <!-- Columna que contiene opiniones-->
         <div class="col-lg-4 p-5" style="background-color: #fff9f3 ">
-            <h2 class="p-3 text-center">Opiniones y sugerencias</h2><button type="button" style="background-color:brown; color:white;" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <h2 class="p-3 text-center">Opiniones y sugerencias</h2>
+            
+            {% if user.is_authenticated %}
+            <button type="button" style="background-color:brown; color:white;" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Opinar / Iritzia eman
               </button><br><br>
-            {% for comment in opinion %}
+            {% else %}
+            <button type="button" style="background-color:brown; color:white;" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+              Opinar / Iritzia eman
+            </button><br><br>
+            {% endif %}
+            
+              {% for comment in opinion %}
             <ul class="list-group border-0">
                 <li class="list-group-item border-0" style="font-style: italic; color:brown;">Comentario/Iritzia:
                 <li class="list-group-item  border-0" style="font-style: italic; color:#555;">{{ comment.text }}<br>
@@ -255,7 +264,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Opinar / Iritzia eman</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Opinar y/o proponer planes complementario<br>Iritzia eman eta/edo plan osagarriak proposatu</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -264,13 +273,37 @@
                 <form action="" method="POST">
                     {% csrf_token %}
                     {{ form }}<br>
-                    <br><button type="submit" class="btn w-100" style="background-color: brown; color:white;">Enviar</button>
+                    <br><button type="submit" class="btn w-100" style="background-color: brown; color:white;">Enviar / Bidali</button>
                 </form> 
             </div>
             {% endif %}
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar / Itxi</button>
+          <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Inicia sesión / Saioa hasi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Inicia sesión para compartir con los demás usuario tu experiencia gastronómica o proponer algún plan complementario. Tu colaboracíón será de gran ayuda.</p>
+            <p>Hasi saioa zure esperientzia gastronomikoa beste erabiltzaileekin partekatu ahal izateko. Oso lagungarria da denontzat.</p>
+            <a href="{% url 'login' %}"><button class="btn" style="background-color:brown; color:white;">Iniciar sesión / Saioa hasi</button></a><br><br>
+            <a href="{% url 'register' %}"><button class="btn" style="background-color:brown; color:white;">registrarse como nuevo usuario / Erregistratu erabiltzaile berria bezala</button></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar / Itxi</button>
           <!--<button type="button" class="btn btn-primary">Save changes</button>-->
         </div>
       </div>

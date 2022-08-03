@@ -1,9 +1,9 @@
 from django import forms
 from django.contrib.auth.models import User
 
-class LoginForm(forms.Form):
-    username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
+class LoginForm(forms.ModelForm):
+    username = forms.CharField(label='Usuario')
+    password = forms.CharField(label='Contraseña')
 
     class Meta:
         model = User
@@ -12,7 +12,7 @@ class LoginForm(forms.Form):
     def __init__(self,*args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({'class': 'form-control'})
-        self.fields['username'].label = "Nombre de usuario / Erabiltzailea"
+        self.fields['username'].label = "Usuario / Erabiltzailea"
         self.fields['password'].widget.attrs.update({'class': 'form-control'})
         self.fields['password'].label = "Contraseña / Pasahitza"
 
