@@ -3,6 +3,8 @@ from django.contrib.gis.db import models
 #from rest_framework_gis import serializers
 from django.contrib.auth.models import User
 import datetime
+#from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 class Marker(models.Model):
     """A marker with name and location."""
@@ -153,4 +155,3 @@ class NaturalPark(models.Model):
 
     def __str__(self):
         return self.documentName
-

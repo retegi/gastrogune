@@ -1,24 +1,61 @@
+from multiprocessing import context
+from django.template import context
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from django.views.generic import TemplateView, DetailView, ListView
+from django.views.generic import TemplateView, DetailView, ListView, CreateView
+from django.views.generic.edit import CreateView
 from django.urls import reverse
 import json
 from django.shortcuts import render
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, HttpResponse
 
 from yaml import Mark
 from .models import Marker, Comment
 import requests
 from bs4 import BeautifulSoup
-from .forms import Comment_form
+from .forms import Comment_form, ContactForm
 from django.views.generic.edit import FormMixin
 from django.db.models import Q
+from django.conf import settings
+from django.core.mail import EmailMessage
 #from django.contrib.gis.geos import GEOSGeometry
+from django.core.mail import send_mail, BadHeaderError
+from django.contrib import messages
+from django.utils.translation import gettext as _
 
-"""def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")"""
 
-#TODOS LOS ELEMENTOS
+def send_the_mail(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = "Gastrogune - Formulario de contacto"
+            body = {
+            'name': form.cleaned_data['name'],
+            'last_name': form.cleaned_data['last_name'],
+			'sender': form.cleaned_data['sender'], 
+            'tel': form.cleaned_data['tel'],
+			'message':form.cleaned_data['message'], 
+			}
+            message = "\n".join(body.values())
+            try:
+                send_mail(subject, message, 'info@gastrogune.eus', ['retegi84@gmail.com'])
+                print("Email enviado!")
+                messages.success(request, 'Enviado con éxito.')
+
+            except BadHeaderError:
+                messages.error(request, 'Error en el envío.')
+                return HttpResponse('Invalid header found.')
+                
+            return redirect ("index")
+    form = ContactForm()
+    return render(request, "home/contact.html", {'form':form})
+
+
+
+class ContactView(TemplateView):
+    template_name = "home/contact.html"
+
+
 
 class HomeView(TemplateView):
     template_name = "home/home.html"
@@ -274,8 +311,9 @@ class LinkView(TemplateView):
         context['marks'] = Marker.objects.all()
         return context
 
-class ContactView(TemplateView):
-    template_name = "home/contactar.html"
+
+    
+    
 
 
 

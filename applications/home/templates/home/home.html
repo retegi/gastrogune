@@ -1,7 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block 'title' %}Gastrogune{% endblock %}
+
+{% block 'messages' %}
+  {% if messages %}
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+        <li {% if message.tags %} class="{{ message.tags }} text-center"{% endif %}>{{ message }}</li>
+      </div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+  {% endif %}
+{% endblock %}
+
 {% block 'content' %}
 
 <div class="row">
@@ -25,11 +43,11 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden">{% trans 'Previous' %}</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden">{% trans 'Next' %}</span>
             </button>
         </div>
         
@@ -41,7 +59,7 @@
 <div class="row">
   <div class="col-lg-2"></div>
   <div class="col-lg-8 col-md-12">
-    <a style="text-decoration: none; color:#333;" href="{% url 'opinion' %}"><h1 class="text-center p-5"><b style="color:brown">Opiniones Gastronómicas con propuestas de planes con Naturaleza y Cultura</b><br>Iritzi Gastronomikoak, eta proposamenak planak egiteko Naturarekin eta Kulturarekin</h1></a>
+    <a style="text-decoration: none; color:#333;" href="{% url 'opinion' %}"><h1 class="text-center p-5"><b style="color:brown">{% trans 'Gastronomic opinions with proposals of plans with Nature and Culture' %}</b></h1></a>
   </div>
   <div class="col-lg-2"></div>
 </div>
@@ -57,7 +75,7 @@
 
             <div class="col-lg-6 col-md-12 p-5" style="background-color: #fff9f3">
               <div class="row">
-                <h1 class="text-center mb-5">Opiniones / Iritziak</h1>
+                <h1 class="text-center mb-5">{% trans 'Comments' %}</h1>
                   {% for comment in comment %}
                   <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
                     <a style="text-decoration: none;" href="{% url 'restaurantDetail' comment.rest.id %}"><h3 style="color:brown"><b>{{ comment.rest }}</b> ( {{ comment.rest.municipality }} )</h3></a>
@@ -93,7 +111,7 @@
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                      {% endif %}  (Calidad-Precio | Kalitatea-Prezioa)<br>
+                      {% endif %}  ({% trans 'Price-quality' %})<br>
 
                       <!--service-->
                       {% if comment.service == 1 %}
@@ -126,7 +144,7 @@
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                      {% endif %}  (Servicio | Zerbitzua)<br>
+                      {% endif %}  ({% trans 'Service' %})<br>
 
                       <!--food-->
                       {% if comment.food == 1 %}
@@ -159,9 +177,9 @@
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                      {% endif %}  (Comida | Janaria)<br>
+                      {% endif %}  ({% trans 'Food' %})<br>
                     </p>
-                    <a href="{% url 'restaurantDetail' comment.rest.id %}"><button class="btn btn-sm" style="background-color:brown; color:white;">Más opiniones | Iritzi gehiago</button></a>
+                    <a href="{% url 'restaurantDetail' comment.rest.id %}"><button class="btn btn-sm" style="background-color:brown; color:white;">{% trans 'More comments' %}</button></a>
                   </div>
                   {% endfor %}
               </div>
@@ -179,30 +197,26 @@
         
         <div class="col-lg-3 col-md-6 col-sm-12 p-5 text-center" style="background-image: url({% static 'img/restaurante.jpg' %}); background-size:100%; text-shadow: 2px 2px 2px #000; color:white;">
           <a href="{% url 'restaurantesEuskadi' %}" style="text-decoration: none; color:white;">
-            <h3><b>Restaurantes</b></h3>
-            <h3><b>Jatetxeak</b></h3>
+            <h3><b>{% trans 'Restaurants' %}</b></h3>
           </a>
         </div>
         
         
         <div class="col-lg-3 col-md-6 col-sm-12 p-5 text-center" style="background-image: url({% static 'img/sagardotegia.jpg' %}); background-size:100%; text-shadow: 2px 2px 2px #000; color:white;">
           <a href="{% url 'sidreriasEuskadi' %}" style="text-decoration: none; color:white;">
-            <h3><b>Sidrerías</b></h3>
-            <h3><b>Sagardotegiak</b></h3>
+            <h3><b>{% trans 'Cider houses' %}</b></h3>
           </a>
         </div>
         
         <div class="col-lg-3 col-md-6 col-sm-12 p-5 text-center" style="background-image: url({% static 'img/asador.jpg' %}); background-size:100%; text-shadow: 2px 2px 2px #000; color:white;">
           <a href="{% url 'bodegaTxakoliEuskadi' %}" style="text-decoration: none; color:white;">
-            <h3><b>Asadores</b></h3>
-            <h3><b>Erretegiak</b></h3>
+            <h3><b>{% trans 'Grills' %}</b></h3>
           </a>
         </div>
         
         <div class="col-lg-3 col-md-6 col-sm-12 p-5 text-center" style="background-image: url({% static 'img/bodega.jpg' %}); background-size:100%; text-shadow: 2px 2px 2px #000; color:white;">
           <a href="{% url 'asadorEuskadi' %}" style="text-decoration: none; color:white;">
-            <h3><b>Bodegas</b></h3>
-            <h3><b>Upeltegiak</b></h3>
+            <h3><b>{% trans 'Cellars' %}</b></h3>
           </a>
         </div>
 
@@ -220,16 +234,14 @@
         
         <div class="col-lg-6 col-md-12 p-5 text-center" style="background-image: url({% static 'img/campoEuskadi.jpg' %}); background-size:100%; text-shadow: 2px 2px 2px #000; color:white;">
           <a href="{% url 'planNature' %}" style="text-decoration: none; color:white;">
-            <h3><b>Gastronomía + Naturaleza</b></h3>
-            <h3><b>Gastronomia + Natura</b></h3>
+            <h3><b>{% trans 'Gastronomy + Nature' %}</b></h3>
           </a>
         </div>
         
         
         <div class="col-lg-6 col-md-12 p-5 text-center" style="background-image: url({% static 'img/culturaEuskadi.jpg' %}); background-size:100%; text-shadow: 2px 2px 2px #000; color:white;">
           <a href="{% url 'planCulture' %}" style="text-decoration: none; color:white;">
-            <h3><b>Gastronomía + Cultura</b></h3>
-            <h3><b>Gastronomia + Kultura</b></h3>
+            <h3><b>{% trans 'Gastronomy + Culture' %}</b></h3>
           </a>
         </div>
 
@@ -244,7 +256,7 @@
       <div class="row">
           <div class="col-lg-12 col-md-12 p-5" style="background-color: #fff9f3">
             <div class="row">
-              <h1 class="text-center mb-5" style="color:brown;">Gastronomía + NATURALEZA & CULTURA<br>Gastronomia + NATURA & KULTURA</h1>
+              <h1 class="text-center mb-5" style="color:brown;">{% trans 'Gastronomy + NATURE + CULTURE' %}</h1>
               
                 {% for comment in comment %}
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
@@ -281,7 +293,7 @@
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    {% endif %}  (Calidad-Precio | Kalitatea-Prezioa)<br>
+                    {% endif %}  ({% trans 'Price-quality' %})<br>
 
                     <!--service-->
                     {% if comment.service == 1 %}
@@ -314,7 +326,7 @@
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    {% endif %}  (Servicio | Zerbitzua)<br>
+                    {% endif %}  ({% trans 'Service' %})<br>
 
                     <!--food-->
                     {% if comment.food == 1 %}
@@ -347,14 +359,14 @@
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    {% endif %}  (Comida | Janaria)<br><br>
+                    {% endif %}  ({% trans 'Food' %})<br><br>
 
-                    <label style="color:brown;"><b>Naturaleza / Natura:</b></label><br>
+                    <label style="color:brown;"><b>{% trans 'Nature' %}</b></label><br>
                     {{ comment.complementNaturePlan }}<br><br>
-                    <label style="color:brown;"><b>Cultura / Kultura:</b></label><br>
+                    <label style="color:brown;"><b>{% trans 'Culture' %}</b></label><br>
                     {{ comment.complementCulturePlan }}<br><br>
                   </p>
-                  <a href="{% url 'restaurantDetail' comment.rest.id %}"><button class="btn btn-sm" style="background-color:brown; color:white;">Más opiniones | Iritzi gehiago</button></a>
+                  <a href="{% url 'restaurantDetail' comment.rest.id %}"><button class="btn btn-sm" style="background-color:brown; color:white;">{% trans 'More opinions' %}</button></a>
                 </div>
                 {% endfor %}
             </div>
@@ -368,8 +380,8 @@
 <div class="row" style="background-color: #FFEFDE;">
   <div class="col-12 text-center p-5" style="background-color: #FFEFDE;">
     <ul class="list-group" style="background-color: #FFEFDE;">
-      <li class="list-group-item border border-0" style="background-color: #FFEFDE;">Diseinua eta programazioa: Iñaki Retegi</li>
-      <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Erabilitako teknologia</button></li>
+      <li class="list-group-item border border-0" style="background-color: #FFEFDE;">{% trans 'Design and developing' %}: Iñaki Retegi</li>
+      <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">{% trans 'Technology used' %}</button></li>
       <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="https://www.retegi.eus">www.retegi.eus</a></li>
       <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="https://www.opendata.euskadi.eus/hasiera/"><img src="{% static 'img/webopd00-logo_opendata.gif' %}"></a></li>
     </ul>
@@ -387,18 +399,18 @@
         
       </div>
       <div class="modal-body text-center">
-        <h5 class="modal-title" id="exampleModalLabel">Erabilitako teknologia</h5><br>
+        <h5 class="modal-title" id="exampleModalLabel">{% trans 'Technology used' %}</h5><br>
         <ul class="list-group border-0">
           <li class="list-group-item border-0"></li>
-          <li class="list-group-item border-0"><b>Webgunea:</b></li>
-          <li class="list-group-item border-0">Programazio frameworka: Django</li>
-          <li class="list-group-item border-0">Lengoaia: Python</li>
-          <li class="list-group-item border-0">Diseinu frameworka: Bootstrap</li>
-          <li class="list-group-item border-0">Planoak: Leaflet</li>
-          <li class="list-group-item border-0">Beste lengoaiak: Javascript, HTML, CSS</li>
+          <li class="list-group-item border-0"><b>{% trans 'Web' %}</b></li>
+          <li class="list-group-item border-0">{% trans 'Development framework' %}: Django</li>
+          <li class="list-group-item border-0">{% trans 'Programming language' %}: Python</li>
+          <li class="list-group-item border-0">{% trans 'Design framework' %}: Bootstrap</li>
+          <li class="list-group-item border-0">{% trans 'Library for maps' %}: Leaflet</li>
+          <li class="list-group-item border-0">{% trans 'Other languages' %}: Javascript, HTML, CSS</li>
           <li class="list-group-item border-0"></li>
           <li class="list-group-item border-0"></li>
-          <li class="list-group-item border-0"><b>Zerbitzaria:</b></li>
+          <li class="list-group-item border-0"><b>{% trans 'Server' %}:</b></li>
           <li class="list-group-item border-0">Ubuntu Serve 20.04LTS</li>
           <li class="list-group-item border-0">Gunicorn</li>
           <li class="list-group-item border-0">NGINX</li>
@@ -406,7 +418,7 @@
         <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar/Itxi</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
       </div>
     </div>
   </div>

@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -121,7 +123,7 @@
                 <a class="nav-link active" href="{% url 'index' %}">Mapa</a>
               </li>-->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Mapa</a>
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Maps' %}</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{% url 'mapEuskadi' %}">Euskadi</a></li>
                   <li><a class="dropdown-item" href="{% url 'mapGipuzkoa' %}">Gipuzkoa</a></li>
@@ -130,7 +132,7 @@
                   </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Restaurantes</a>
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Restaurants' %}</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{% url 'restaurantesEuskadi' %}">Euskadi</a></li>
                   <li><a class="dropdown-item" href="{% url 'restaurantesGipuzkoa' %}">Gipuzkoa</a></li>
@@ -139,7 +141,7 @@
                   </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sidrerías</a>
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Cider houses' %}</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{% url 'sidreriasEuskadi' %}">Euskadi</a></li>
                   <li><a class="dropdown-item" href="{% url 'sidreriasGipuzkoa' %}">Gipuzkoa</a></li>
@@ -148,7 +150,7 @@
                   </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Bodegas Txakoli</a>
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Cellars' %}</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{% url 'bodegaTxakoliEuskadi' %}">Euskadi</a></li>
                   <li><a class="dropdown-item" href="{% url 'bodegaTxakoliGipuzkoa' %}">Gipuzkoa</a></li>
@@ -157,7 +159,7 @@
                   </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Asadores</a>
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Grills' %}</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{% url 'asadorEuskadi' %}">Euskadi</a></li>
                   <li><a class="dropdown-item" href="{% url 'asadorGipuzkoa' %}">Gipuzkoa</a></li>
@@ -166,23 +168,23 @@
                   </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Planes</a>
+                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Plans' %}</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{% url 'planNature' %}">Gastronomía + NATURALEZA</a></li>
-                  <li><a class="dropdown-item" href="{% url 'planCulture' %}">Gastronomía + CULTURA</a></li>
+                  <li><a class="dropdown-item" href="{% url 'planNature' %}">{% trans 'Gastronomy and NATURE' %}</a></li>
+                  <li><a class="dropdown-item" href="{% url 'planCulture' %}">{% trans 'Gastronomy and CULTURE' %}</a></li>
                   </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{% url 'opinion' %}">Opiniones</a>
+                <a class="nav-link active" href="{% url 'opinion' %}">{% trans 'Comments' %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{% url 'table' %}">Tabla</a>
+                <a class="nav-link active" href="{% url 'table' %}">{% trans 'Table' %}</a>
               </li>
               <!--<li class="nav-item">
                 <a class="nav-link active" aria-current="page" target="_blank" href="https://www.opendata.euskadi.eus/catalogo/-/restaurantes-asadores-sidrerias-bodegas-y-bares-de-pintxos-de-euskadi/">Opendata</a>
               </li>-->
               <li class="nav-item">
-                <a class="nav-link active" href="{% url 'enlaces' %}">Enlaces</a>
+                <a class="nav-link active" href="{% url 'enlaces' %}">{% trans 'Links' %}</a>
               </li>
               <!--<li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
@@ -199,7 +201,7 @@
                   </ul>
               </li>-->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'contactar' %}">Contactar</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'send_the_mail' %}">{% trans 'Contact' %}</a>
               </li>
 
 
@@ -233,6 +235,32 @@
               <input class="form-control mr-3" type="search" id="kword" name="kword" placeholder="Buscar / Bilatu" aria-label="Search">
             </form>
 
+            <!--{% for lang in LANGUAGES %}
+            <form action="/i18n/setlang/" method="post">{% csrf_token %}
+              <input name="next" type="text" value="{{ lang.1 }}"  style="display:none;"/>
+              <input name="sendChangeLanguage" id="sendChangeLanguage" class="form-control" type="submit" value="{{ lang.1 }}" />
+            </form>
+            {% endfor %}-->
+            
+
+            <form action="/i18n/setlang/" method="post">{% csrf_token %}
+              <input name="next" type="hidden" value="/" />
+                <select class="form-select" name="language" onchange="changeLanguage()">
+                  {% for lang in LANGUAGES %}
+                    {% if lang.1|lower == LANGUAGE_CODE|lower %}
+                    <option value="{{ lang.1 }}" selected style="min-width:100px" class="">{{ lang.1 }}</option>
+                    {% else %}
+                    agur
+                    <option value="{{ lang.1 }}" style="min-width:100px" class="">{{ lang.1 }}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+              <input name="sendChangeLanguage" id="sendChangeLanguage" class="form-control" type="submit" value="Go" style="display:none;" />
+            </form>
+           
+            
+      
+
             <!--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">ES</a>
@@ -248,10 +276,11 @@
           {% if user.is_authenticated %}
               <a href="#" style="text-transform:uppercase; text-decoration:none; color:black; padding-left: 5px;"><button class="btn" style="text-transform:uppercase;">{{ user.username }}</button></a>  <a class="m-2" href="{% url 'logout' %}" style="text-transform:uppercase; text-decoration:none; color:black">Logout</a>
           {% else %}
-              <a href="{% url 'login' %}" style="text-transform:uppercase; text-decoration:none; color:black"><button class="btn" style="text-transform:uppercase;">Login</button></a>
-              <a href="{% url 'register' %}" style="text-transform:uppercase; text-decoration:none; color:black"><button class="btn" style="text-transform:uppercase;">Registrarse</button></a>
+              <a href="{% url 'login' %}" style="text-transform:uppercase; text-decoration:none; color:black"><button class="btn" style="text-transform:uppercase;">{% trans 'Login' %}</button></a>
+              <!--<a href="{% url 'register' %}" style="text-transform:uppercase; text-decoration:none; color:black"><button class="btn" style="text-transform:uppercase;">{% trans 'Register' %}</button></a>-->
              
           {% endif %}
+          <!--<a href="{% url 'password_reset_url' %}">{% trans 'Reset' %}</a>-->
           <ul>
 
       </ul>
@@ -259,12 +288,19 @@
           </div>
         </div>
       </nav>
-    
+    {% block 'messages' %} {% endblock %}
    {% block 'content' %} {% endblock %}
       
       
   </body>
 
+
+  <script>
+    function changeLanguage() {
+      var selectButton = document.getElementById( 'sendChangeLanguage' );
+      selectButton.click();
+    }
+  </script>
  
 
 

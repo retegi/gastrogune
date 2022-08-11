@@ -14,6 +14,28 @@ from .models import Comment
            
         }"""
 
+class ContactForm(forms.Form):
+    name = forms.CharField(
+        max_length=100,
+        label="Nombre / Izena")
+    name.widget.attrs.update({'class': 'form-control'})
+    last_name = forms.CharField(
+        max_length=100,
+        label="Apellido / Abizena")
+    last_name.widget.attrs.update({'class': 'form-control'})
+    sender = forms.EmailField(
+        label="Email / Emaila")
+    sender.widget.attrs.update({'class': 'form-control'})
+    tel = forms.CharField(
+        label="Teléfono / Telefonoa")
+    tel.widget.attrs.update({'class': 'form-control'})
+    message = forms.CharField(
+        widget=forms.Textarea,
+        label="Texto / Textua")
+    message.widget.attrs.update({'class': 'form-control'})
+    
+
+
 class Comment_form(forms.ModelForm):
     class Meta:
         model = Comment

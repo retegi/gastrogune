@@ -1,6 +1,6 @@
 from django.urls import path
 from django.views.generic import TemplateView
-from .views import IndexView, ContactView, LinkView, insertarDatos, insertarParques, opendata, MarcasView, RestaurantDetailView, TableView, LinkView, MapGipuzkoaView, MapBizkaiaView, MapArabaView, RestaurantesEuskadiView, RestaurantesGipuzkoaView, RestaurantesBizkaiaView, RestaurantesArabaView, SidreriasEuskadiView, SidreriasGipuzkoaView, SidreriasBizkaiaView, SidreriasArabaView, BodegaTxakoliEuskadiView, BodegaTxakoliGipuzkoaView, BodegaTxakoliBizkaiaView, BodegaTxakoliArabaView, AsadorEuskadiView, AsadorGipuzkoaView, AsadorBizkaiaView, AsadorArabaView, HomeView, MapEuskadiView, PlanNatureView, PlanCultureView, OpinionView
+from .views import IndexView, ContactView, LinkView, insertarDatos, insertarParques, opendata, MarcasView, RestaurantDetailView, TableView, LinkView, MapGipuzkoaView, MapBizkaiaView, MapArabaView, RestaurantesEuskadiView, RestaurantesGipuzkoaView, RestaurantesBizkaiaView, RestaurantesArabaView, SidreriasEuskadiView, SidreriasGipuzkoaView, SidreriasBizkaiaView, SidreriasArabaView, BodegaTxakoliEuskadiView, BodegaTxakoliGipuzkoaView, BodegaTxakoliBizkaiaView, BodegaTxakoliArabaView, AsadorEuskadiView, AsadorGipuzkoaView, AsadorBizkaiaView, AsadorArabaView, HomeView, MapEuskadiView, PlanNatureView, PlanCultureView, OpinionView, send_mail, send_the_mail
 from . import views
 #from djgeojson.views import GeoJSONLayerView
 import json
@@ -34,7 +34,7 @@ urlpatterns = [
     path('asadorBizkaia', AsadorBizkaiaView.as_view(), name='asadorBizkaia'),
     path('asadorAraba', AsadorArabaView.as_view(), name='asadorAraba'),
 
-    path('contact/', ContactView.as_view(), name='contactar'),
+    
     path('enlaces/', LinkView.as_view(), name='enlaces'),
     path('opendata/', opendata),
     path('marcas/', MarcasView),
@@ -46,6 +46,9 @@ urlpatterns = [
     path('planNature/', PlanNatureView.as_view(), name='planNature'),
     path('planCulture/', PlanCultureView.as_view(), name='planCulture'),
     path('opinion/', OpinionView.as_view(), name='opinion'),
+    path('contactar/', ContactView.as_view(), name='contactar'), #Muestra el template que contiene el formulario de contacto
+    path('send_the_mail', views.send_the_mail, name="send_the_mail"), #Procesa el formulario por POST y realiza send_mail()
+    
     #Buscador
     #path('buscador/', busqueda, name='busqueda'),
 

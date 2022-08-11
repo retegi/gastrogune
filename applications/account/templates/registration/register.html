@@ -6,24 +6,27 @@
 
 <div class="row p-5 text-center">
 
-
-  <h1>Nuevo usuari@ / Erabiltzaile berria</h1>
-  {% if form.errors %}
-    <p>
-      El usuario o la contraseña no es correcta / Erabiltzailea edo pasahitza ez datoz bat.
-      Inténtelo de nuvo / Saiatu berriz
-    </p>
-  {% else %}
-    <p>Utilice el siguiente formulario para registrarse<br>Erabili urrengo formularioa erabiltzaile berria sortzeko.</p>
-  {% endif %}
-  <div class="login-form">
-    <form action="." method="post">
-      {{ user_form.as_p }}
-      {% csrf_token %}
-      <p><input type="submit" value="Crear cuenta"></p>
-    </form>
-    
+  <div class="col-lg-4 col-md-0"></div>
+  <div class="col-lg-4 col-md-12">
+    <h1>Nuevo usuari@ / Erabiltzaile berria</h1>
+    {% if form.errors %}
+      <p>
+        El usuario o la contraseña no es correcta / Erabiltzailea edo pasahitza ez datoz bat.
+        Inténtelo de nuvo / Saiatu berriz
+      </p>
+    {% else %}
+      <p>Utilice el siguiente formulario para registrarse<br>Erabili urrengo formularioa erabiltzaile berria sortzeko.</p>
+    {% endif %}
+    <div class="login-form">
+      <form action="." method="post">{% csrf_token %}
+        {{ user_form.as_p }}
+        
+        <p><input type="submit" value="Crear cuenta"></p>
+      </form>
+      
+    </div>
   </div>
+  <div class="col-lg-4 col-md-0"></div>
 
 </div>
   

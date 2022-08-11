@@ -3,7 +3,7 @@
 
 {% block 'title' %}Contactar{% endblock %}
 {% block 'content' %} 
-    <div class="col-lg-8 mx-auto p-3 py-md-5"  style="min-height: 100vh;">
+    <div class="col-lg-4 col-md-12 mx-auto p-3 py-md-5"  style="min-height: 100vh;">
         
       
         <main>
@@ -13,26 +13,11 @@
           <div class="mb-5">
             <a href="/docs/5.2/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
           </div>-->
-          <form>
-            <div class="mb-3">
-                <label for="exampleInputName1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">Nunca compartiremos tu email.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Texto</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-             <!--<div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-             <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>-->
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
+          <form action="{% url 'send_the_mail' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form }}
+                <br><button class="btn" style="background-color: brown; color:white;" type="submit">Enviar / Bidali</button>
+            </form>
           <!--<hr class="col-3 col-md-2 mb-5">
       
           <div class="row g-5">
