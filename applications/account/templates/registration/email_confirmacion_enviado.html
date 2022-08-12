@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block 'title' %}Registro usuari@ confirmado{% endblock %}
 
 {% block 'content' %}
@@ -7,7 +8,7 @@
 <div class="row p-5 text-center">
 
 
-  <h1>Email de confirmación de nuevo usuario enviado.</h1>
+  <h1>{% trans 'New user confirmation email sent.' %}</h1>
   
 
 </div>

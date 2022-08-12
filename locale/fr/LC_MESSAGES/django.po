@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 22:23+0200\n"
+"POT-Creation-Date: 2022-08-13 01:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,165 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: applications/account/templates/registration/confirm_expired.html:11
+msgid "The confirmation email has expired, you must register again."
+msgstr "L'e-mail de confirmation a expiré, vous devez vous réinscrire."
+
+#: applications/account/templates/registration/contactar.html:11
+#: applications/home/templates/base.html:204
+#: applications/home/templates/home/contact.html:13
+msgid "Contact"
+msgstr "Contact"
+
+#: applications/account/templates/registration/contactar.html:20
+#: applications/home/templates/home/enlaces.html:16
+#: applications/home/templates/home/table.html:15
+msgid "Name"
+msgstr "Nom"
+
+#: applications/account/templates/registration/contactar.html:24
+#, fuzzy
+#| msgid "Address"
+msgid "Email address"
+msgstr "Adresse"
+
+#: applications/account/templates/registration/contactar.html:26
+msgid "We will never share your email"
+msgstr "Nous ne partagerons jamais votre courriel"
+
+#: applications/account/templates/registration/contactar.html:29
+msgid "Text"
+msgstr "Texte"
+
+#: applications/account/templates/registration/contactar.html:36
+#: applications/home/templates/home/contact.html:22
+#: applications/home/templates/home/restaurantDetail.html:277
+msgid "Send"
+msgstr "Envoyer"
+
+#: applications/account/templates/registration/email_confirmacion_enviado.html:11
+msgid "New user confirmation email sent."
+msgstr "Nouvel e-mail de confirmation d'utilisateur envoyé."
+
+#: applications/account/templates/registration/logged_out.html:7
+msgid "Logged out"
+msgstr "Déconnecté"
+
+#: applications/account/templates/registration/logged_out.html:8
+msgid "You have been successfully logged out. You can"
+msgstr "Vous avez été déconnecté avec succès. Vous pouvez"
+
+#: applications/account/templates/registration/logged_out.html:8
+msgid "log-in again"
+msgstr "reconnectez-vous"
+
+#: applications/account/templates/registration/login.html:12
+#: applications/home/templates/base.html:279
+#: applications/home/templates/home/restaurantDetail.html:297
+#: applications/home/templates/home/restaurantDetail.html:303
+msgid "Login"
+msgstr "Login"
+
+#: applications/account/templates/registration/login.html:15
+msgid "Your name or password is incorrect, try again."
+msgstr "Votre nom ou mot de passe est incorrect, réessayez."
+
+#: applications/account/templates/registration/login.html:18
+msgid ""
+"Use the following form to log in, if you do not have an account register here"
+msgstr ""
+"Utilisez le formulaire suivant pour vous connecter, si vous n'avez pas de "
+"compte inscrivez-vous ici"
+
+#: applications/account/templates/registration/login.html:18
+#: applications/account/templates/registration/recuperar_password.html:18
+#: applications/home/templates/base.html:280
+#: applications/home/templates/home/restaurantDetail.html:304
+msgid "Register"
+msgstr "Register"
+
+#: applications/account/templates/registration/login.html:27
+#: applications/account/templates/registration/recuperar_password.html:12
+#: applications/account/templates/registration/recuperar_password.html:27
+msgid "Recover password"
+msgstr "Récupérer mot de passe"
+
+#: applications/account/templates/registration/password_reset_complete.html:7
+msgid "Password set"
+msgstr "Mot de passe défini"
+
+#: applications/account/templates/registration/password_reset_complete.html:8
+msgid "Your password has been set. You can"
+msgstr "Votre mot de passe a été défini. Tu peux"
+
+#: applications/account/templates/registration/password_reset_complete.html:8
+msgid "log in now"
+msgstr "Connecte-toi maintenant"
+
+#: applications/account/templates/registration/password_reset_confirm.html:7
+#: applications/account/templates/registration/password_reset_done.html:7
+msgid "Reset your password"
+msgstr "réinitialisez votre mot de passe"
+
+#: applications/account/templates/registration/password_reset_confirm.html:9
+msgid "Please enter your new password twice:"
+msgstr "Veuillez entrer votre nouveau mot de passe deux fois :"
+
+#: applications/account/templates/registration/password_reset_confirm.html:16
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+"Le lien de réinitialisation du mot de passe n'était pas valide, peut-être "
+"parce qu'il a déjà été utilisé. Veuillez demander une nouvelle "
+"réinitialisation du mot de passe."
+
+#: applications/account/templates/registration/password_reset_done.html:8
+msgid "We have emailed you instructions for setting your password."
+msgstr ""
+"Nous vous avons envoyé par e-mail des instructions pour définir votre mot de "
+"passe."
+
+#: applications/account/templates/registration/password_reset_done.html:9
+msgid "If you don`t receive an email, please make sure you"
+msgstr "Si vous ne recevez pas d'e-mail, assurez-vous de"
+
+#: applications/account/templates/registration/password_reset_form2.html:7
+msgid "Forgotten your password?"
+msgstr "Mot de passe oublié?"
+
+#: applications/account/templates/registration/password_reset_form2.html:8
+msgid "Enter your e-mail address to obtain a new password."
+msgstr "Entrez votre adresse e-mail pour obtenir un nouveau mot de passe."
+
+#: applications/account/templates/registration/recuperar_password.html:15
+msgid "Your name or password is not correct. Try again."
+msgstr "Votre nom ou mot de passe n'est pas correct. Réessayer."
+
+#: applications/account/templates/registration/recuperar_password.html:18
+msgid ""
+"Use the following form to log in, if you do not have an account register "
+"here:"
+msgstr ""
+"Utilisez le formulaire suivant pour vous connecter, si vous n'avez pas de "
+"compte, inscrivez-vous ici :"
+
+#: applications/account/templates/registration/register.html:12
+msgid "New user"
+msgstr "Nouvel utilisateur"
+
+#: applications/account/templates/registration/register.html:15
+msgid "Username or password is not correct. Try again."
+msgstr "Le nom d'utilisateur ou le mot de passe n'est pas correct. Réessayer."
+
+#: applications/account/templates/registration/register.html:18
+msgid "Use the following form to register"
+msgstr "Utilisez le formulaire suivant pour vous inscrire"
+
+#: applications/account/templates/registration/register_confirmado.html:11
+msgid "User registration confirmed successfully."
+msgstr "Enregistrement de l'utilisateur confirmé avec succès."
 
 #: applications/home/templates/base.html:126
 msgid "Maps"
@@ -69,39 +228,13 @@ msgstr "Tableau"
 msgid "Links"
 msgstr "Liens"
 
-#: applications/home/templates/base.html:204
-#: applications/home/templates/home/contact.html:13
-msgid "Contact"
-msgstr "Contact"
-
 #: applications/home/templates/base.html:235
 msgid "Search"
 msgstr "Chercher"
 
-#: applications/home/templates/base.html:279
-#: applications/home/templates/home/restaurantDetail.html:297
-#: applications/home/templates/home/restaurantDetail.html:303
-msgid "Login"
-msgstr "Login"
-
-#: applications/home/templates/base.html:280
-#: applications/home/templates/home/restaurantDetail.html:304
-msgid "Register"
-msgstr "Register"
-
 #: applications/home/templates/base.html:283
 msgid "Reset"
 msgstr "Reset"
-
-#: applications/home/templates/home/contact.html:22
-#: applications/home/templates/home/restaurantDetail.html:277
-msgid "Send"
-msgstr "Envoyer"
-
-#: applications/home/templates/home/enlaces.html:16
-#: applications/home/templates/home/table.html:15
-msgid "Name"
-msgstr "Nom"
 
 #: applications/home/templates/home/enlaces.html:17
 #, fuzzy
@@ -181,6 +314,7 @@ msgstr "Technologie utilisée"
 
 #: applications/home/templates/home/home.html:405
 #: applications/home/templates/home/restaurantDetail copy.html:58
+#: applications/home/templates/home/restaurantDetail.html:61
 #: applications/home/templates/home/table.html:25
 msgid "Web"
 msgstr "Web"
@@ -234,6 +368,7 @@ msgid "Restaurant + Nature"
 msgstr "Gastronomie + Nature"
 
 #: applications/home/templates/home/restaurantDetail copy.html:38
+#: applications/home/templates/home/restaurantDetail.html:41
 #: applications/home/templates/home/table.html:21
 msgid "Address"
 msgstr "Adresse"
@@ -243,27 +378,44 @@ msgid "locality"
 msgstr "localité"
 
 #: applications/home/templates/home/restaurantDetail copy.html:46
+#: applications/home/templates/home/restaurantDetail.html:49
 #: applications/home/templates/home/table.html:19
 msgid "Province"
 msgstr "Province"
 
 #: applications/home/templates/home/restaurantDetail copy.html:50
+#: applications/home/templates/home/restaurantDetail.html:53
 #: applications/home/templates/home/table.html:23
 msgid "Telephone"
 msgstr "Teléphone"
 
 #: applications/home/templates/home/restaurantDetail copy.html:54
+#: applications/home/templates/home/restaurantDetail.html:57
 #: applications/home/templates/home/table.html:24
 msgid "Email"
 msgstr "Email"
 
 #: applications/home/templates/home/restaurantDetail copy.html:62
+#: applications/home/templates/home/restaurantDetail.html:65
 msgid "Diners"
 msgstr "Dîners"
+
+#: applications/home/templates/home/restaurantDetail.html:45
+#, fuzzy
+#| msgid "Locality"
+msgid "Location"
+msgstr "Localité"
 
 #: applications/home/templates/home/restaurantDetail.html:124
 msgid "Opinions and suggestions"
 msgstr "Commentaires et suggestions"
+
+#: applications/home/templates/home/restaurantDetail.html:128
+#: applications/home/templates/home/restaurantDetail.html:132
+#, fuzzy
+#| msgid "More opinions"
+msgid "My opinion"
+msgstr "Mon avis"
 
 #: applications/home/templates/home/restaurantDetail.html:138
 msgid "Suggestion"
@@ -286,7 +438,9 @@ msgid "Supplemental plan"
 msgstr "plan de commentaire"
 
 #: applications/home/templates/home/restaurantDetail.html:268
-msgid "discuss and propose complementary plans"
+#, fuzzy
+#| msgid "discuss and propose complementary plans"
+msgid "Comment and propose complementary plans"
 msgstr "Commentaires et propositions complémentaires"
 
 #: applications/home/templates/home/restaurantDetail.html:307
@@ -334,3 +488,8 @@ msgstr "EU"
 #: gastrogune/settings.py:147
 msgid "FR"
 msgstr "FR"
+
+#, fuzzy
+#~| msgid "Web"
+#~ msgid "We"
+#~ msgstr "Web"

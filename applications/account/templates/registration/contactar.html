@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block 'title' %}Contactar{% endblock %}
 {% block 'content' %} 
     <div class="col-lg-8 mx-auto p-3 py-md-5"  style="min-height: 100vh;">
         
       
         <main>
-          <h1>Contactar</h1>
+          <h1>{% trans 'Contact' %}</h1>
           <!--<p class="fs-5 col-md-8">Si quiere proponer una mejora o quiere.</p>
       
           <div class="mb-5">
@@ -16,23 +17,23 @@
           <form action="{% url 'send_emails' %}"  method="post">
             {% csrf_token %}
             <div class="mb-3">
-                <label for="exampleInputName1" class="form-label">Nombre</label>
+                <label for="exampleInputName1" class="form-label">{% trans 'Name' %}</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <label for="exampleInputEmail1" class="form-label">{% trans 'Email address' %}</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">Nunca compartiremos tu email.</div>
+              <div id="emailHelp" class="form-text">{% trans 'We will never share your email' %}.</div>
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Texto</label>
+                <label for="exampleFormControlTextarea1" class="form-label">{% trans 'Text' %}</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
              <!--<div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
              <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>-->
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">{% trans 'Send' %}</button>
           </form>
           <!--<hr class="col-3 col-md-2 mb-5">
       

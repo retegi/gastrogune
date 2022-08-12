@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block 'title' %}Login{% endblock %}
 
 {% block 'content' %}
@@ -8,15 +9,13 @@
   <div class="col-lg-5 col-md-0"></div>
   <div class="col-lg-2 col-md-12">
 
-      <h1>Iniciar sesión / Saioa hasi</h1>
+      <h1>{% trans 'Login' %}</h1>
       {% if form.errors %}
         <p>
-          Tu nombre o contraseña no es correcto / Zure erabiltzaiea edo pasahitza ez da zuzena
-          Inténtelo de nuevo / Berriz saiatu
+          {% trans 'Your name or password is incorrect, try again.' %}
         </p>
       {% else %}
-        <p>Utiliza el siguiente formulario para logearte, si no tiene una cuenta regístrate aquí: <a href="{% url 'register' %}">Registrarse</a></p>
-        <p>Urrengo formularioa erabili ezazu saioa hasteko, erabiltzaile konturik ez baduzu, sortu ezazu bat: <a href="{% url 'register' %}">Erregistratu</a></p>
+        <p>{% trans 'Use the following form to log in, if you do not have an account register here' %}: <a href="{% url 'register' %}">{% trans 'Register' %}</a></p>
       {% endif %}
       <div class="login-form">
         <form action="{% url 'login' %}" method="post">
@@ -25,7 +24,7 @@
           <input type="hidden" name="next" value="{{ next }}" />
           <p><input type="submit" value="Log-in"></p>
         </form>
-        <p><a href="{% url 'password_reset' %}">Recuperar contraseña</a></p>
+        <p><a href="{% url 'password_reset' %}">{% trans 'Recover password' %}</a></p>
         
       </div>
   </div>
