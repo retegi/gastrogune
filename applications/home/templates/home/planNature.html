@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block 'title' %}Gastrogune{% endblock %}
 {% block 'content' %}
 
@@ -18,8 +19,7 @@
         
         <div class="col-lg-12 col-md-12 p-5 text-center" style="background-image: url({% static 'img/campoEuskadi.jpg' %}); background-size:100%; text-shadow: 2px 2px 2px #000; color:white;">
           <a href="" style="text-decoration: none; color:white;">
-            <h1><b>Restaurante + Naturaleza</b></h1>
-            <h1><b>Jatetxeak + Natura</b></h1>
+            <h1><b>{% trans 'Restaurant + Nature' %}</b></h1>
           </a>
         </div>
         
@@ -142,7 +142,7 @@
                     <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                     {% endif %}  (Comida | Janaria)<br><br>
 
-                    <label style="color:brown;"><b>Naturaleza / Natura:</b></label><br>
+                    <label style="color:brown;"><b>{% trans 'Nature' %}</b></label><br>
                     {{ comment.complementNaturePlan }}<br><br>
                     
                   </p>

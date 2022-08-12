@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 19:33+0200\n"
+"POT-Creation-Date: 2022-08-12 22:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,14 +60,17 @@ msgid "Comments"
 msgstr "Comentarios"
 
 #: applications/home/templates/base.html:181
+#: applications/home/templates/home/table.html:12
 msgid "Table"
 msgstr "Tabla"
 
 #: applications/home/templates/base.html:187
+#: applications/home/templates/home/enlaces.html:14
 msgid "Links"
 msgstr "Enlaces"
 
 #: applications/home/templates/base.html:204
+#: applications/home/templates/home/contact.html:13
 msgid "Contact"
 msgstr "Contactar"
 
@@ -76,16 +79,35 @@ msgid "Search"
 msgstr "Buscar"
 
 #: applications/home/templates/base.html:279
+#: applications/home/templates/home/restaurantDetail.html:297
+#: applications/home/templates/home/restaurantDetail.html:303
 msgid "Login"
 msgstr "Login"
 
 #: applications/home/templates/base.html:280
+#: applications/home/templates/home/restaurantDetail.html:304
 msgid "Register"
 msgstr "Registrar"
 
 #: applications/home/templates/base.html:283
 msgid "Reset"
 msgstr "Reset"
+
+#: applications/home/templates/home/contact.html:22
+#: applications/home/templates/home/restaurantDetail.html:277
+msgid "Send"
+msgstr "Enviar"
+
+#: applications/home/templates/home/enlaces.html:16
+#: applications/home/templates/home/table.html:15
+msgid "Name"
+msgstr "Nombre"
+
+#: applications/home/templates/home/enlaces.html:17
+#, fuzzy
+#| msgid "Links"
+msgid "Link"
+msgstr "Enlaces"
 
 #: applications/home/templates/home/home.html:46
 msgid "Previous"
@@ -97,8 +119,7 @@ msgstr "Siguiente"
 
 #: applications/home/templates/home/home.html:62
 msgid "Gastronomic opinions with proposals of plans with Nature and Culture"
-msgstr ""
-"Opiniones gastronómicas con propuestas de planes con Naturaleza y Cultura"
+msgstr "Opiniones gastronómicas con propuestas de planes con Naturaleza y Cultura"
 
 #: applications/home/templates/home/home.html:114
 #: applications/home/templates/home/home.html:296
@@ -112,6 +133,8 @@ msgstr "Servicio"
 
 #: applications/home/templates/home/home.html:180
 #: applications/home/templates/home/home.html:362
+#: applications/home/templates/home/opinion.html:144
+#: applications/home/templates/home/restaurantDetail.html:244
 msgid "Food"
 msgstr "Comida"
 
@@ -132,10 +155,14 @@ msgid "Gastronomy + NATURE + CULTURE"
 msgstr "Gastronomía + NATURALEZA + CULTURA"
 
 #: applications/home/templates/home/home.html:364
+#: applications/home/templates/home/opinion.html:146
+#: applications/home/templates/home/planNature.html:145
 msgid "Nature"
 msgstr "Naturaleza"
 
 #: applications/home/templates/home/home.html:366
+#: applications/home/templates/home/opinion.html:148
+#: applications/home/templates/home/planCulture.html:148
 msgid "Culture"
 msgstr "Cultura"
 
@@ -153,6 +180,8 @@ msgid "Technology used"
 msgstr "Tecnología utilizada"
 
 #: applications/home/templates/home/home.html:405
+#: applications/home/templates/home/restaurantDetail copy.html:58
+#: applications/home/templates/home/table.html:25
 msgid "Web"
 msgstr "Web"
 
@@ -181,8 +210,114 @@ msgid "Server"
 msgstr "Servidor"
 
 #: applications/home/templates/home/home.html:421
+#: applications/home/templates/home/restaurantDetail.html:283
 msgid "Close"
 msgstr "Cerrar"
+
+#: applications/home/templates/home/opinion.html:26
+#: applications/home/templates/home/restaurantDetail copy.html:121
+#, fuzzy
+#| msgid "More opinions"
+msgid "Opinions"
+msgstr "Más opiniones"
+
+#: applications/home/templates/home/planCulture.html:26
+#, fuzzy
+#| msgid "Gastronomy + Culture"
+msgid "Restaurant + Culture"
+msgstr "Gastronomía + Cultura"
+
+#: applications/home/templates/home/planNature.html:22
+#, fuzzy
+#| msgid "Gastronomy + Nature"
+msgid "Restaurant + Nature"
+msgstr "Gastronomía + Naturaleza"
+
+#: applications/home/templates/home/restaurantDetail copy.html:38
+#: applications/home/templates/home/table.html:21
+msgid "Address"
+msgstr "Dirección"
+
+#: applications/home/templates/home/restaurantDetail copy.html:42
+msgid "locality"
+msgstr "Localidad"
+
+#: applications/home/templates/home/restaurantDetail copy.html:46
+#: applications/home/templates/home/table.html:19
+msgid "Province"
+msgstr "Provincia"
+
+#: applications/home/templates/home/restaurantDetail copy.html:50
+#: applications/home/templates/home/table.html:23
+msgid "Telephone"
+msgstr "Teléfono"
+
+#: applications/home/templates/home/restaurantDetail copy.html:54
+#: applications/home/templates/home/table.html:24
+msgid "Email"
+msgstr "Email"
+
+#: applications/home/templates/home/restaurantDetail copy.html:62
+msgid "Diners"
+msgstr "Comensales"
+
+#: applications/home/templates/home/restaurantDetail.html:124
+msgid "Opinions and suggestions"
+msgstr "Opiniones y sugerencias"
+
+#: applications/home/templates/home/restaurantDetail.html:138
+msgid "Suggestion"
+msgstr "Sugerencia"
+
+#: applications/home/templates/home/restaurantDetail.html:140
+#, fuzzy
+#| msgid "Nature"
+msgid "Nature plan"
+msgstr "Naturaleza"
+
+#: applications/home/templates/home/restaurantDetail.html:142
+#, fuzzy
+#| msgid "Culture"
+msgid "Culture plan"
+msgstr "Cultura"
+
+#: applications/home/templates/home/restaurantDetail.html:144
+msgid "Supplemental plan"
+msgstr ""
+
+#: applications/home/templates/home/restaurantDetail.html:268
+msgid "discuss and propose complementary plans"
+msgstr ""
+
+#: applications/home/templates/home/restaurantDetail.html:307
+#, fuzzy
+#| msgid "Close"
+msgid "close"
+msgstr "Cerrar"
+
+#: applications/home/templates/home/table.html:13
+msgid "Restaurants, Cider Houses, Wineries and Grills"
+msgstr "Restaurantes, Sidrerías, Bodegas de vino y Asadores"
+
+#: applications/home/templates/home/table.html:16
+msgid "Type"
+msgstr "Tipo"
+
+#: applications/home/templates/home/table.html:17
+msgid "Zone"
+msgstr "Zona"
+
+#: applications/home/templates/home/table.html:18
+msgid "Locality"
+msgstr "Localidad"
+
+#: applications/home/templates/home/table.html:22
+msgid "Postal code"
+msgstr "Código postal"
+
+#: applications/home/templates/home/table.html:26
+msgid "Detail"
+msgstr "Detalle"
 
 #: gastrogune/settings.py:144
 msgid "EN"
@@ -198,7 +333,7 @@ msgstr "EU"
 
 #: gastrogune/settings.py:147
 msgid "FR"
-msgstr ""
+msgstr "FR"
 
 #~ msgid "Cider house"
 #~ msgstr "Sidrería"

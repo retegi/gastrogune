@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block 'title' %}Gastrogune{% endblock %}
 {% block 'content' %}
 
@@ -8,22 +9,21 @@
   <div class="col-lg-12 mx-auto p-3 py-md-5" id="" style="">
     <table class="table  table-striped">
       <thead>
-        <h1 class="text-center" style="color:brown">Tabla / Taula</h1>
-        <h2 class="text-center">Restaurantes, Sidrerías, Bodegas y Asadores</h2>
-        <h2 class="text-center">Jatetxeak, Sagardotegiak, Upeltegiak eta Erretegiak</h2>
+        <h1 class="text-center" style="color:brown">{% trans 'Table' %}</h1>
+        <h2 class="text-center">{% trans 'Restaurants, Cider Houses, Wineries and Grills' %}</h2>
         <tr class="bg-light">
-          <th scope="col">Nombre / Izena</th>
-          <th scope="col">Tipo / Mota</th>
-          <th scope="col">Zona / Zonaldea</th>
-          <th scope="col">Localidad / Herria</th>
-          <th scope="col">Provincia / Probintzia</th>
+          <th scope="col">{% trans 'Name' %}</th>
+          <th scope="col">{% trans 'Type' %}</th>
+          <th scope="col">{% trans 'Zone' %}</th>
+          <th scope="col">{% trans 'Locality' %}</th>
+          <th scope="col">{% trans 'Province' %}</th>
      
-          <th scope="col">Dirección / Helbidea</th>
-          <th scope="col">Código postal / Posta Kodea</th>
-          <th scope="col">Teléfono / Telefonoa</th>
-          <th scope="col">Email / Emaila</th>
-          <th scope="col">Web</th>
-          <th scope="col">Detalles / Xehetasunak</th>
+          <th scope="col">{% trans 'Address' %}</th>
+          <th scope="col">{% trans 'Postal code' %}</th>
+          <th scope="col">{% trans 'Telephone' %}</th>
+          <th scope="col">{% trans 'Email' %}</th>
+          <th scope="col">{% trans 'Web' %}</th>
+          <th scope="col">{% trans 'Detail' %}</th>
         </tr>
       </thead>
       <tbody>

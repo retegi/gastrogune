@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block 'title' %}Gastrogune{% endblock %}
 
 {% block 'head' %}
@@ -120,7 +121,7 @@
 
         <!-- Columna que contiene opiniones-->
         <div class="col-lg-4 p-5" style="background-color: #fff9f3 ">
-            <h2 class="p-3 text-center">Opiniones y sugerencias</h2>
+            <h2 class="p-3 text-center">{% trans 'Opinions and suggestions' %}</h2>
             
             {% if user.is_authenticated %}
             <button type="button" style="background-color:brown; color:white;" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -134,13 +135,13 @@
             
               {% for comment in opinion %}
             <ul class="list-group border-0">
-                <li class="list-group-item border-0" style="font-style: italic; color:brown;">Comentario/Iritzia:
+                <li class="list-group-item border-0" style="font-style: italic; color:brown;">{% trans 'Suggestion' %}:
                 <li class="list-group-item  border-0" style="font-style: italic; color:#555;">{{ comment.text }}<br>
-                  <li class="list-group-item  border-0" style="font-style: italic; color:brown;">Plan Naturaleza / Natura plana:
+                  <li class="list-group-item  border-0" style="font-style: italic; color:brown;">{% trans 'Nature plan' %}:
                     <li class="list-group-item border-0" style="font-style: italic; color:#555;">{{ comment.complementNaturePlan }}<br>
-                  <li class="list-group-item  border-0" style="font-style: italic; color:brown;">Plan Cultura/ Kultura plana:
+                  <li class="list-group-item  border-0" style="font-style: italic; color:brown;">{% trans 'Culture plan' %}:
                     <li class="list-group-item border-0" style="font-style: italic; color:#555;">{{ comment.complementCulturePlan }}<br>
-                    <li class="list-group-item  border-0" style="font-style: italic; color:brown;">Plan complementario/ Plan osagarria:
+                    <li class="list-group-item  border-0" style="font-style: italic; color:brown;">{% trans 'Supplemental plan' %}:
                 <li class="list-group-item border-0" style="font-style: italic; color:#555;">{{ comment.complementOtherPlan }}<br>
                 <p><br>
                       <!--QualityPrice-->
@@ -240,7 +241,7 @@
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
                       <svg style="color:brown;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                      {% endif %}  (Comida | Janaria)<br>
+                      {% endif %}  ({% trans 'Food' %})<br>
                 </p>    
                 <div class="w-100 mt-2">
                     <label class="text-right"><b>{{ comment.author }}</b></label>
@@ -264,7 +265,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Opinar y/o proponer planes complementario<br>Iritzia eman eta/edo plan osagarriak proposatu</h5>
+          <h5 class="modal-title" id="exampleModalLabel">{% trans 'Comment and propose complementary plans' %}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -273,13 +274,13 @@
                 <form action="" method="POST">
                     {% csrf_token %}
                     {{ form }}<br>
-                    <br><button type="submit" class="btn w-100" style="background-color: brown; color:white;">Enviar / Bidali</button>
+                    <br><button type="submit" class="btn w-100" style="background-color: brown; color:white;">{% trans 'Send' %}</button>
                 </form> 
             </div>
             {% endif %}
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar / Itxi</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
           <!--<button type="button" class="btn btn-primary">Save changes</button>-->
         </div>
       </div>
@@ -293,17 +294,17 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión / Saioa hasi</h5>
+          <h5 class="modal-title" id="exampleModalLabel">{% trans 'Login' %}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <p>Inicia sesión para compartir con los demás usuarios tu experiencia gastronómica y/o proponer algún plan complementario. Tu colaboracíón es de gran ayuda.</p>
-            <p>Hasi saioa zure esperientzia gastronomikoa beste erabiltzaileekin partekatu ahal izateko. Oso lagungarria da denontzat.</p>
-            <a href="{% url 'login' %}"><button class="btn" style="background-color:brown; color:white;">Iniciar sesión / Saioa hasi</button></a><br><br>
-            <a href="{% url 'register' %}"><button class="btn" style="background-color:brown; color:white;">Registrarse como nuevo usuario / Erabiltzaile berria erregistratzeko</button></a>
+            <p>Log in to share your gastronomic experience with other users and/or propose a complementary plan. Your collaboration is of great help.</p>
+            
+            <a href="{% url 'login' %}"><button class="btn" style="background-color:brown; color:white;">{% trans 'Login' %}</button></a><br><br>
+            <a href="{% url 'register' %}"><button class="btn" style="background-color:brown; color:white;">{% trans 'Register' %}</button></a>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar / Itxi</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'close' %}</button>
           <!--<button type="button" class="btn btn-primary">Save changes</button>-->
         </div>
       </div>

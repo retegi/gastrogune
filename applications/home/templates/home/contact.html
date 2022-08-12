@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block 'title' %}Contactar{% endblock %}
 {% block 'content' %} 
+
+
     <div class="col-lg-4 col-md-12 mx-auto p-3 py-md-5"  style="min-height: 100vh;">
         
       
         <main>
-          <h1>Contactar</h1>
+          <h1>{% trans 'Contact' %}</h1>
           <!--<p class="fs-5 col-md-8">Si quiere proponer una mejora o quiere.</p>
       
           <div class="mb-5">
@@ -16,7 +19,7 @@
           <form action="{% url 'send_the_mail' %}" method="post" enctype="multipart/form-data">
               {% csrf_token %}
               {{ form }}
-                <br><button class="btn" style="background-color: brown; color:white;" type="submit">Enviar / Bidali</button>
+                <br><button class="btn" style="background-color: brown; color:white;" type="submit">{% trans 'Send' %}</button>
             </form>
           <!--<hr class="col-3 col-md-2 mb-5">
       

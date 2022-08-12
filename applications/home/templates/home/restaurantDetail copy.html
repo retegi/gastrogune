@@ -35,31 +35,31 @@
                     <tbody>
                     
                     <tr>
-                        <th scope="row">Dirección</th>
+                        <th scope="row">{% trans 'Address' %}</th>
                         <td>{{ object.address }} {{ object.postalCode }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Localidad</th>
+                        <th scope="row">{% trans 'locality' %}</th>
                         <td>{{ object.locality }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Provincia</th>
+                        <th scope="row">{% trans 'Province' %}</th>
                         <td>{{ object.territory }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Teléfono</th>
+                        <th scope="row">{% trans 'Telephone' %}</th>
                         <td>{{ object.phone }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Email</th>
+                        <th scope="row">{% trans 'Email' %}</th>
                         <td>{{ object.tourismEmail }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Web</th>
+                        <th scope="row">{% trans 'Web' %}</th>
                         <td><a style="text-decoration: none;" href="{{ object.web }}" target="_blank">{{ object.web }}</a></td>
                     </tr>
                     <tr>
-                        <th scope="row">Comensales</th>
+                        <th scope="row">{% trans 'Diners' %}</th>
                         <td>{{ object.capacity }}</td>
                     </tr>
 
@@ -118,7 +118,7 @@
 
         <!-- Columna que contiene opiniones-->
         <div class="col-lg-4 p-5">
-            <h1>Opiniones</h1>
+            <h1>{% trans 'Opinions' %}</h1>
             <ul>
                 <li>
                     Usuario1: 
