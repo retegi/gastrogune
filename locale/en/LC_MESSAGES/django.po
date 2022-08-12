@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-10 00:27+0200\n"
+"POT-Creation-Date: 2022-08-12 19:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,70 +18,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: applications/home/templates/base.html:125
+#: applications/home/templates/base.html:126
 msgid "Maps"
 msgstr "Maps"
 
-#: applications/home/templates/base.html:134
+#: applications/home/templates/base.html:135
 #: applications/home/templates/home/home.html:200
 msgid "Restaurants"
 msgstr "Restaurants"
 
-#: applications/home/templates/base.html:143
+#: applications/home/templates/base.html:144
 #: applications/home/templates/home/home.html:207
 msgid "Cider houses"
 msgstr "Cider houses"
 
-#: applications/home/templates/base.html:152
+#: applications/home/templates/base.html:153
 #: applications/home/templates/home/home.html:219
 msgid "Cellars"
 msgstr "Cellars"
 
-#: applications/home/templates/base.html:161
+#: applications/home/templates/base.html:162
 #: applications/home/templates/home/home.html:213
 msgid "Grills"
 msgstr "Grills"
 
-#: applications/home/templates/base.html:170
+#: applications/home/templates/base.html:171
 #, fuzzy
 #| msgid "Planes"
 msgid "Plans"
 msgstr "Plans"
 
-#: applications/home/templates/base.html:172
+#: applications/home/templates/base.html:173
 msgid "Gastronomy and NATURE"
 msgstr "Gastronomy and NATURE"
 
-#: applications/home/templates/base.html:173
+#: applications/home/templates/base.html:174
 msgid "Gastronomy and CULTURE"
 msgstr "Gastronomy and CULTURE"
 
-#: applications/home/templates/base.html:177
+#: applications/home/templates/base.html:178
 #: applications/home/templates/home/home.html:78
 msgid "Comments"
 msgstr "Comments"
 
-#: applications/home/templates/base.html:180
+#: applications/home/templates/base.html:181
 msgid "Table"
 msgstr "Table"
 
-#: applications/home/templates/base.html:186
+#: applications/home/templates/base.html:187
 msgid "Links"
 msgstr "Links"
 
-#: applications/home/templates/base.html:203
+#: applications/home/templates/base.html:204
 msgid "Contact"
 msgstr "Contact"
 
-#: applications/home/templates/base.html:263
+#: applications/home/templates/base.html:235
+msgid "Search"
+msgstr "Search"
+
+#: applications/home/templates/base.html:279
 msgid "Login"
 msgstr "Login"
 
-#: applications/home/templates/base.html:264
+#: applications/home/templates/base.html:280
 msgid "Register"
 msgstr "Register"
 
-#: applications/home/templates/base.html:267
+#: applications/home/templates/base.html:283
 msgid "Reset"
 msgstr "Reset"
 
@@ -116,7 +120,11 @@ msgstr "Food"
 msgid "More comments"
 msgstr "More comments"
 
-
+#: applications/home/templates/home/home.html:237
+#, fuzzy
+#| msgid "Gastronomy + Culture"
+msgid "Gastronomy + Nature"
+msgstr "Gastronomy + Culture"
 
 #: applications/home/templates/home/home.html:244
 msgid "Gastronomy + Culture"
@@ -190,6 +198,10 @@ msgstr "ES"
 #: gastrogune/settings.py:146
 msgid "EU"
 msgstr "EU"
+
+#: gastrogune/settings.py:147
+msgid "FR"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Cider houses"

@@ -16,64 +16,64 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: applications/home/templates/base.html:126
 msgid "Maps"
-msgstr "Mapak"
+msgstr "Carte"
 
 #: applications/home/templates/base.html:135
 #: applications/home/templates/home/home.html:200
 msgid "Restaurants"
-msgstr "Jatetxeak"
+msgstr "Restaurants"
 
 #: applications/home/templates/base.html:144
 #: applications/home/templates/home/home.html:207
 msgid "Cider houses"
-msgstr "Sagardotegiak"
+msgstr "Cidreries"
 
 #: applications/home/templates/base.html:153
 #: applications/home/templates/home/home.html:219
 msgid "Cellars"
-msgstr "Upeltegiak"
+msgstr "Caves"
 
 #: applications/home/templates/base.html:162
 #: applications/home/templates/home/home.html:213
 msgid "Grills"
-msgstr "Erretegiak"
+msgstr "Grilles"
 
 #: applications/home/templates/base.html:171
 msgid "Plans"
-msgstr "Planak"
+msgstr "Plans"
 
 #: applications/home/templates/base.html:173
 msgid "Gastronomy and NATURE"
-msgstr "Gastronomia eta NATURA"
+msgstr "Gastronomie et NATURE"
 
 #: applications/home/templates/base.html:174
 msgid "Gastronomy and CULTURE"
-msgstr "Gastronomia eta KULTURA"
+msgstr "Gastronomie et CULTURE"
 
 #: applications/home/templates/base.html:178
 #: applications/home/templates/home/home.html:78
 msgid "Comments"
-msgstr "Iruzkinak"
+msgstr "commentaires"
 
 #: applications/home/templates/base.html:181
 msgid "Table"
-msgstr "Taula"
+msgstr "tableau"
 
 #: applications/home/templates/base.html:187
 msgid "Links"
-msgstr "Estekak"
+msgstr "Liens"
 
 #: applications/home/templates/base.html:204
 msgid "Contact"
-msgstr "Kontaktatu"
+msgstr "Contact"
 
 #: applications/home/templates/base.html:235
 msgid "Search"
-msgstr "Bilatu"
+msgstr "Chercher"
 
 #: applications/home/templates/base.html:279
 msgid "Login"
@@ -81,83 +81,75 @@ msgstr "Login"
 
 #: applications/home/templates/base.html:280
 msgid "Register"
-msgstr "Erregistratu"
+msgstr "Register"
 
 #: applications/home/templates/base.html:283
 msgid "Reset"
-msgstr "Berrabiarazi"
+msgstr "Reset"
 
 #: applications/home/templates/home/home.html:46
 msgid "Previous"
-msgstr "Aurrekoak"
+msgstr "Précédent"
 
 #: applications/home/templates/home/home.html:50
 msgid "Next"
-msgstr "Urrengoa"
+msgstr "Suivant"
 
 #: applications/home/templates/home/home.html:62
 msgid "Gastronomic opinions with proposals of plans with Nature and Culture"
-msgstr ""
-"Iruzkin gastronomikoak eta Naturarekin eta Kulturarekin erlazionatutako plan "
-"proposamenak"
+msgstr "Avis gastronomiques avec propositions de plans avec Nature et Culture"
 
 #: applications/home/templates/home/home.html:114
 #: applications/home/templates/home/home.html:296
 msgid "Price-quality"
-msgstr "Prezio-kalitatea"
+msgstr "Qualité-prix"
 
 #: applications/home/templates/home/home.html:147
 #: applications/home/templates/home/home.html:329
 msgid "Service"
-msgstr "Zerbitzua"
+msgstr "Service"
 
 #: applications/home/templates/home/home.html:180
 #: applications/home/templates/home/home.html:362
 msgid "Food"
-msgstr "Janaria"
+msgstr "Aliments"
 
 #: applications/home/templates/home/home.html:182
 msgid "More comments"
-msgstr "Iruzkin gehiago"
+msgstr "Plus de commentaires"
 
 #: applications/home/templates/home/home.html:237
-#, fuzzy
-#| msgid "Gastronomy + Culture"
 msgid "Gastronomy + Nature"
-msgstr "Gastronomia + Kultura"
+msgstr "Gastronomie + Nature"
 
 #: applications/home/templates/home/home.html:244
 msgid "Gastronomy + Culture"
-msgstr "Gastronomia + Kultura"
+msgstr "Gastronomie + Culture"
 
 #: applications/home/templates/home/home.html:259
 msgid "Gastronomy + NATURE + CULTURE"
-msgstr "Gastronomia + NATURA + KULTURA"
+msgstr "Gastronomie + NATURE + CULTURE"
 
 #: applications/home/templates/home/home.html:364
 msgid "Nature"
-msgstr "Natura"
+msgstr "La nature"
 
 #: applications/home/templates/home/home.html:366
 msgid "Culture"
-msgstr "Kultura"
+msgstr "Culture"
 
 #: applications/home/templates/home/home.html:369
-#, fuzzy
-#| msgid "More comments"
 msgid "More opinions"
-msgstr "Iruzkin gehiago"
+msgstr "Plus d'avis"
 
 #: applications/home/templates/home/home.html:383
 msgid "Design and developing"
-msgstr "Diseinua eta garapena"
+msgstr "Conception et développement"
 
-# msgid "More comments"
-# msgstr "Iruzkin gehiago"
 #: applications/home/templates/home/home.html:384
 #: applications/home/templates/home/home.html:402
 msgid "Technology used"
-msgstr "Erabilitako teknologia"
+msgstr "Technologie utilisée"
 
 #: applications/home/templates/home/home.html:405
 msgid "Web"
@@ -165,31 +157,31 @@ msgstr "Web"
 
 #: applications/home/templates/home/home.html:406
 msgid "Development framework"
-msgstr "Programazio frameworka"
+msgstr "Cadre de développement"
 
 #: applications/home/templates/home/home.html:407
 msgid "Programming language"
-msgstr "Programazio lengoaia"
+msgstr "Langage de programmation"
 
 #: applications/home/templates/home/home.html:408
 msgid "Design framework"
-msgstr "Diseinu frameworka"
+msgstr "Cadre de conception"
 
 #: applications/home/templates/home/home.html:409
 msgid "Library for maps"
-msgstr "Mapa liburutegia"
+msgstr "Bibliothèque de cartes"
 
 #: applications/home/templates/home/home.html:410
 msgid "Other languages"
-msgstr "Beste lengoaiak"
+msgstr "Autres langues"
 
 #: applications/home/templates/home/home.html:413
 msgid "Server"
-msgstr "Zerbitzaria"
+msgstr "Serveur"
 
 #: applications/home/templates/home/home.html:421
 msgid "Close"
-msgstr ""
+msgstr "Proche"
 
 #: gastrogune/settings.py:144
 msgid "EN"
@@ -205,14 +197,4 @@ msgstr "EU"
 
 #: gastrogune/settings.py:147
 msgid "FR"
-msgstr ""
-
-#, fuzzy
-#~| msgid "Cider houses"
-#~ msgid "Cider house"
-#~ msgstr "Sagardotegiak"
-
-#~ msgid ""
-#~ "CloseIruzkin gastronomikoak eta Naturarekin eta Kulturarekin "
-#~ "erlazionatutako plan proposamenak"
-#~ msgstr "Itxi"
+msgstr "FR"

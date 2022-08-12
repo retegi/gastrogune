@@ -109,7 +109,7 @@
  <link href="{% static 'css/starter-template.css' %}" rel="stylesheet">
 </head>
 <body>
-   
+   <!-- ffefde-->
     <nav style="background-color: #ffefde" class="navbar navbar-expand-lg" aria-label="Ninth navbar example">
         <div class="container-xl">
           <a class="navbar-brand" href="{% url 'index' %}" style="color:brown; text-transform: uppercase;"><b>Gastrogune</b></a>
@@ -232,7 +232,7 @@
             <!--FORM-->
             <form action="{% url 'table' %}" role="search" method="GET">
               {% csrf_token %}
-              <input class="form-control mr-3" type="search" id="kword" name="kword" placeholder="Buscar / Bilatu" aria-label="Search">
+              <input class="form-control mr-3" type="search" id="kword" name="kword" placeholder="{% trans 'Search' %}" aria-label="Search">
             </form>
 
             <!--{% for lang in LANGUAGES %}
