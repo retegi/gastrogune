@@ -21,8 +21,82 @@
 {% endblock %}
 
 {% block 'content' %}
-
 <div class="row">
+  
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8 col-md-12">
+    
+    {% for videoNum in videoNum %}
+      {% if videoNum == '0' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/navajas.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '1' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/restaurante.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '2' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/musicos.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '3' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/carne-parrilla.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '4' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/desfile.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '5' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/langosta.mp4' %}" type="video/mp4">
+      </video>
+      {% elif videoNum == '6' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/caminando.mp4' %}" type="video/mp4">
+      </video>
+      {% elif videoNum == '7' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/surf.mp4' %}" type="video/mp4">
+      </video>
+      {% elif videoNum == '8' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/acuario.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '9' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/costilla.mp4' %}" type="video/mp4">
+      </video>
+      {% elif videoNum == '10' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/costilla.mp4' %}" type="video/mp4">
+      </video>
+      {% elif videoNum == '11' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/navajas.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '12' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/restaurante.mp4' %}" type="video/mp4">
+      </video> 
+      {% elif videoNum == '13' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/musicos.mp4' %}" type="video/mp4">
+      </video>
+      {% elif videoNum == '14' %}
+      <video width="100%" height="" autoplay muted loop>
+        <source src="{% static 'video/carne-parrilla.mp4' %}" type="video/mp4">
+      </video> 
+      {% endif %}
+    {% endfor %}
+    
+     
+    
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+
+<!--<div class="row">
     <div class="col-lg-2"></div>
     <div class="col-lg-8 col-md-12">
 
@@ -51,10 +125,10 @@
             </button>
         </div>
         
-        <!--<img class="w-100" src="{% static 'img/restaurante01.jpg' %}">-->
+       
     </div>
     <div class="col-lg-2"></div>
-</div>
+</div>-->
 
 <div class="row">
   <div class="col-lg-2"></div>
@@ -377,16 +451,21 @@
 </div>
 
 
-<div class="row" style="background-color: #FFEFDE;">
+<!--<div class="row" style="background-color: #FFEFDE;">
   <div class="col-12 text-center p-5" style="background-color: #FFEFDE;">
     <ul class="list-group" style="background-color: #FFEFDE;">
       <li class="list-group-item border border-0" style="background-color: #FFEFDE;">{% trans 'Design and developing' %}: Iñaki Retegi</li>
       <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">{% trans 'Technology used' %}</button></li>
       <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="https://www.retegi.eus">www.retegi.eus</a></li>
       <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="https://www.opendata.euskadi.eus/hasiera/"><img src="{% static 'img/webopd00-logo_opendata.gif' %}"></a></li>
+      <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="#">{% trans 'Legal warning' %}</a></li>
+      <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="#">{% trans 'Privacy policy' %}</a></li> 
+      <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="#">{% trans 'Cookies policy' %}</a></li>
+
+
     </ul>
   </div>
-</div>
+</div>-->
 
 
 

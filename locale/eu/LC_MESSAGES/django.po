@@ -253,7 +253,7 @@ msgstr "Urrengoa"
 #: applications/home/templates/home/home.html:62
 msgid "Gastronomic opinions with proposals of plans with Nature and Culture"
 msgstr ""
-"Iruzkin gastronomikoak eta Naturarekin eta Kulturarekin erlazionatutako plan"
+"Iruzkin gastronomikoak eta Naturarekin eta Kulturarekin erlazionatutako plan proposamenak"
 
 #: applications/home/templates/home/home.html:114
 #: applications/home/templates/home/home.html:296

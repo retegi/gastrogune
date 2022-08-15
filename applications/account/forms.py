@@ -17,8 +17,21 @@ class LoginForm(forms.ModelForm):
         self.fields['password'].widget.attrs.update({'class': 'form-control','type':'password'})
         self.fields['password'].label = "Contraseña / Pasahitza"
 
+class PasswordRecoverFormValid(forms.ModelForm):
+    email = forms.EmailField(required=True, widget=forms.TextInput(attrs={'placeholder': ''}))
+    
+    class Meta:
+        model = User
+        fields = ('email',)
 
+    def __init__(self,*args, **kwargs):
+        super(PasswordRecoverFormValid, self).__init__(*args, **kwargs)
+        
+        self.fields['email'].widget.attrs.update({'class': 'form-control'})
+        self.fields['email'].label = "Email"
+        
 
+        
 
 class UserRegistrationForm(forms.ModelForm):
     password = forms.CharField(label='Password',
@@ -71,7 +84,7 @@ def save(self, commit=True):
 
 
 class RegistrationForm(UserCreationForm): #Forma para lo de confirmar por email
-    email = forms.EmailField(required=True, widget=forms.TextInput(attrs={'placeholder': 'E-mail address'}))
+    email = forms.EmailField(required=True, widget=forms.TextInput(attrs={'placeholder': ''}))
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
 
@@ -82,14 +95,14 @@ class RegistrationForm(UserCreationForm): #Forma para lo de confirmar por email
     def __init__(self,*args, **kwargs):
         super(RegistrationForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({'class': 'form-control'})
-        self.fields['username'].label = "Nombre de usuario / Erabiltzaile izena"
+        self.fields['username'].label = "Nombre de usuario / Erabiltzaile izena / Username"
         self.fields['first_name'].widget.attrs.update({'class': 'form-control'})
-        self.fields['first_name'].label = "Usuario / Erabiltzailea"
+        self.fields['first_name'].label = "Nombre / Izena / First Name"
         self.fields['last_name'].widget.attrs.update({'class': 'form-control'})
-        self.fields['last_name'].label = "Apellido / Abizena"
+        self.fields['last_name'].label = "Apellido / Abizena / Last name"
         self.fields['email'].widget.attrs.update({'class': 'form-control'})
-        self.fields['email'].label = "Email / Emaila"
+        self.fields['email'].label = "Email / Emaila / Email"
         self.fields['password1'].widget.attrs.update({'class': 'form-control'})
-        self.fields['password1'].label = "Contraseña / Pasahitza"
+        self.fields['password1'].label = "Contraseña / Pasahitza / Password"
         self.fields['password2'].widget.attrs.update({'class': 'form-control'})
-        self.fields['password2'].label = "Repetir password / Errepikatu pasahitza"
+        self.fields['password2'].label = "Repetir password / Errepikatu pasahitza / Repite password"

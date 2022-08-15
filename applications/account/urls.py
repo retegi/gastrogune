@@ -29,7 +29,10 @@ urlpatterns = [
     
     path('accounts/confirm/<activation_key>', views.register_confirm, name='register_confirm'),
         
+    #path('password_reset/',
+    #    auth_views.PasswordResetView.as_view(),
+    #    name='password_reset'),"""
     path('password_reset/',
-        auth_views.PasswordResetView.as_view(),
+        views.password_recover,
         name='password_reset'),
 ]

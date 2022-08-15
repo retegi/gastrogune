@@ -192,7 +192,7 @@ msgstr "Sidrerías"
 #: applications/home/templates/base.html:153
 #: applications/home/templates/home/home.html:219
 msgid "Cellars"
-msgstr "Sidrerías"
+msgstr "Bodegas"
 
 #: applications/home/templates/base.html:162
 #: applications/home/templates/home/home.html:213

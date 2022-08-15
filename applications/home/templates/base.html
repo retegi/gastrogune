@@ -6,7 +6,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Gastrogune, web de gastronomía en Euskadi y planes con naturalez y cultura">
+    <meta name="description" content="Gastrogune, web de gastronomía en Euskadi y planes gastronómicos con naturaleza y cultura">
+    <meta name="keywords" content="Gastrogune, Gastronomia Euskadi, Gastronomia Euskadi, Opendata Euskadi, Resturantes de Euskadi, Sidrerías de Euskadi, Euskadiko jatetxeak, Euskadiko sagardotegiak">
     <meta name="author" content="Iñaki Retegi">
     <meta name="generator" content="Hugo 0.101.0">
     <title>{% block 'title' %}{% endblock %}</title>
@@ -277,7 +278,7 @@
               <a href="#" style="text-transform:uppercase; text-decoration:none; color:black; padding-left: 5px;"><button class="btn" style="text-transform:uppercase;">{{ user.username }}</button></a>  <a class="m-2" href="{% url 'logout' %}" style="text-transform:uppercase; text-decoration:none; color:black">Logout</a>
           {% else %}
               <a href="{% url 'login' %}" style="text-transform:uppercase; text-decoration:none; color:black"><button class="btn" style="text-transform:uppercase;">{% trans 'Login' %}</button></a>
-              <!--<a href="{% url 'register' %}" style="text-transform:uppercase; text-decoration:none; color:black"><button class="btn" style="text-transform:uppercase;">{% trans 'Register' %}</button></a>-->
+              <a href="{% url 'register' %}" style="text-transform:uppercase; text-decoration:none; color:black"><button class="btn" style="text-transform:uppercase;">{% trans 'Register' %}</button></a>
              
           {% endif %}
           <!--<a href="{% url 'password_reset_url' %}">{% trans 'Reset' %}</a>-->
@@ -291,7 +292,67 @@
     {% block 'messages' %} {% endblock %}
    {% block 'content' %} {% endblock %}
       
-      
+   <div class="row p-5" style="background-color: #FFEFDE;">
+    <div class="col-lg-4 col-md-0 text-center"></div>
+
+    <div class="col-lg-4 col-md-12 text-center">
+      <ul class="list-group" style="background-color: #FFEFDE;">
+        <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="https://www.opendata.euskadi.eus/hasiera/">Open Data Euskadi</a></li>
+        <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="https://www.euskadi.eus">Euskadi.eus</a></li>
+        <hr>
+        <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">{% trans 'Technology used' %}</button></li>
+        <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="https://www.retegi.eus"><b>www.retegi.eus</b></a></li>
+        <li class="list-group-item border border-0" style="background-color: #FFEFDE;">{% trans 'Design and developing' %}: <b>Iñaki Retegi</b></li>
+        <hr>
+        <li class="list-group-item border border-0" style="background-color: #FFEFDE;"><a style="text-decoration: none; color:black;" target="_blank" href="#">{% trans 'Legal warning' %} |</a><a style="text-decoration: none; color:black;" target="_blank" href="#"> {% trans 'Privacy policy' %} |</a><a style="text-decoration: none; color:black;" target="_blank" href="#"> {% trans 'Cookies policy' %}</a></li>
+        
+        
+      </ul>
+    </div>
+    <div class="col-lg-4 col-md-0 text-center"></div>
+    
+  </div> 
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+      </div>
+      <div class="modal-body text-center">
+        <h5 class="modal-title" id="exampleModalLabel">{% trans 'Technology used' %}</h5><br>
+        <ul class="list-group border-0">
+          <li class="list-group-item border-0"></li>
+          <li class="list-group-item border-0"><b>{% trans 'Web' %}</b></li>
+          <li class="list-group-item border-0">{% trans 'Development framework' %}: Django</li>
+          <li class="list-group-item border-0">{% trans 'Programming language' %}: Python</li>
+          <li class="list-group-item border-0">{% trans 'Design framework' %}: Bootstrap</li>
+          <li class="list-group-item border-0">{% trans 'Library for maps' %}: Leaflet</li>
+          <li class="list-group-item border-0">{% trans 'Other languages' %}: Javascript, HTML, CSS</li>
+          <li class="list-group-item border-0"></li>
+          <li class="list-group-item border-0"></li>
+          <li class="list-group-item border-0"><b>{% trans 'Server' %}:</b></li>
+          <li class="list-group-item border-0">Ubuntu Serve 20.04LTS</li>
+          <li class="list-group-item border-0">Gunicorn</li>
+          <li class="list-group-item border-0">NGINX</li>
+          <li class="list-group-item border-0"></li>
+          <li class="list-group-item border-0"></li>
+          <li class="list-group-item border-0"><b>{% trans 'Code' %}:</b></li>
+          <li class="list-group-item border-0">Github: <a target="_blank" href="https://github.com/retegi/gastrogune">https://github.com/retegi/gastrogune</a></li>
+        </ul>
+        <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   </body>
 
 

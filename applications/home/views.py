@@ -22,6 +22,7 @@ from django.core.mail import EmailMessage
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib import messages
 from django.utils.translation import gettext as _
+import random
 
 
 def send_the_mail(request):
@@ -64,6 +65,9 @@ class HomeView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['marks'] = Marker.objects.all()
         context['comment'] = Comment.objects.all()[:8]
+        context['videoNum'] = str(random.randrange(0, 9))
+        numero = context['videoNum']
+        print(numero)
         return context
 
 class PlanNatureView(TemplateView):
