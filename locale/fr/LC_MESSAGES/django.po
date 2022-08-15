@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-13 01:26+0200\n"
+"POT-Creation-Date: 2022-08-15 18:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "The confirmation email has expired, you must register again."
 msgstr "L'e-mail de confirmation a expiré, vous devez vous réinscrire."
 
 #: applications/account/templates/registration/contactar.html:11
-#: applications/home/templates/base.html:204
+#: applications/home/templates/base.html:205
 #: applications/home/templates/home/contact.html:13
 msgid "Contact"
 msgstr "Contact"
@@ -49,6 +49,7 @@ msgid "Text"
 msgstr "Texte"
 
 #: applications/account/templates/registration/contactar.html:36
+#: applications/account/templates/registration/password_reset_form.html:26
 #: applications/home/templates/home/contact.html:22
 #: applications/home/templates/home/restaurantDetail.html:277
 msgid "Send"
@@ -57,6 +58,10 @@ msgstr "Envoyer"
 #: applications/account/templates/registration/email_confirmacion_enviado.html:11
 msgid "New user confirmation email sent."
 msgstr "Nouvel e-mail de confirmation d'utilisateur envoyé."
+
+#: applications/account/templates/registration/email_recuperacion_password_enviado.html:11
+msgid "The password recovery email has been sent"
+msgstr "L'e-mail de récupération du mot de passe a été envoyé"
 
 #: applications/account/templates/registration/logged_out.html:7
 msgid "Logged out"
@@ -71,7 +76,7 @@ msgid "log-in again"
 msgstr "reconnectez-vous"
 
 #: applications/account/templates/registration/login.html:12
-#: applications/home/templates/base.html:279
+#: applications/home/templates/base.html:280
 #: applications/home/templates/home/restaurantDetail.html:297
 #: applications/home/templates/home/restaurantDetail.html:303
 msgid "Login"
@@ -89,13 +94,16 @@ msgstr ""
 "compte inscrivez-vous ici"
 
 #: applications/account/templates/registration/login.html:18
+#: applications/account/templates/registration/password_reset_form.html:18
 #: applications/account/templates/registration/recuperar_password.html:18
-#: applications/home/templates/base.html:280
+#: applications/home/templates/base.html:281
 #: applications/home/templates/home/restaurantDetail.html:304
 msgid "Register"
 msgstr "Register"
 
 #: applications/account/templates/registration/login.html:27
+#: applications/account/templates/registration/password_reset_form.html:4
+#: applications/account/templates/registration/password_reset_form.html:12
 #: applications/account/templates/registration/recuperar_password.html:12
 #: applications/account/templates/registration/recuperar_password.html:27
 msgid "Recover password"
@@ -141,6 +149,22 @@ msgstr ""
 msgid "If you don`t receive an email, please make sure you"
 msgstr "Si vous ne recevez pas d'e-mail, assurez-vous de"
 
+#: applications/account/templates/registration/password_reset_form.html:15
+msgid "There is no user with the indicated email."
+msgstr "Il n'y a pas d'utilisateur avec l'email indiqué."
+
+#: applications/account/templates/registration/password_reset_form.html:18
+#, fuzzy
+#| msgid ""
+#| "Use the following form to log in, if you do not have an account register "
+#| "here"
+msgid ""
+"Use the following form to recover password, if you do not have an account "
+"register here"
+msgstr ""
+"Utilisez le formulaire suivant pour vous connecter, si vous n'avez pas de "
+"compte inscrivez-vous ici"
+
 #: applications/account/templates/registration/password_reset_form2.html:7
 msgid "Forgotten your password?"
 msgstr "Mot de passe oublié?"
@@ -177,64 +201,130 @@ msgstr "Utilisez le formulaire suivant pour vous inscrire"
 msgid "User registration confirmed successfully."
 msgstr "Enregistrement de l'utilisateur confirmé avec succès."
 
-#: applications/home/templates/base.html:126
+#: applications/home/templates/base.html:127
 msgid "Maps"
 msgstr "Carte"
 
-#: applications/home/templates/base.html:135
-#: applications/home/templates/home/home.html:200
+#: applications/home/templates/base.html:136
+#: applications/home/templates/home/home.html:274
 msgid "Restaurants"
 msgstr "Restaurants"
 
-#: applications/home/templates/base.html:144
-#: applications/home/templates/home/home.html:207
+#: applications/home/templates/base.html:145
+#: applications/home/templates/home/home.html:281
 msgid "Cider houses"
 msgstr "Cidreries"
 
-#: applications/home/templates/base.html:153
-#: applications/home/templates/home/home.html:219
+#: applications/home/templates/base.html:154
+#: applications/home/templates/home/home.html:293
 msgid "Cellars"
 msgstr "Caves"
 
-#: applications/home/templates/base.html:162
-#: applications/home/templates/home/home.html:213
+#: applications/home/templates/base.html:163
+#: applications/home/templates/home/home.html:287
 msgid "Grills"
 msgstr "Grilles"
 
-#: applications/home/templates/base.html:171
+#: applications/home/templates/base.html:172
 msgid "Plans"
 msgstr "Plans"
 
-#: applications/home/templates/base.html:173
+#: applications/home/templates/base.html:174
 msgid "Gastronomy and NATURE"
 msgstr "Gastronomie et NATURE"
 
-#: applications/home/templates/base.html:174
+#: applications/home/templates/base.html:175
 msgid "Gastronomy and CULTURE"
 msgstr "Gastronomie et CULTURE"
 
-#: applications/home/templates/base.html:178
-#: applications/home/templates/home/home.html:78
+#: applications/home/templates/base.html:179
+#: applications/home/templates/home/home.html:152
 msgid "Comments"
 msgstr "Commentaires"
 
-#: applications/home/templates/base.html:181
+#: applications/home/templates/base.html:182
 #: applications/home/templates/home/table.html:12
 msgid "Table"
 msgstr "Tableau"
 
-#: applications/home/templates/base.html:187
+#: applications/home/templates/base.html:188
 #: applications/home/templates/home/enlaces.html:14
 msgid "Links"
 msgstr "Liens"
 
-#: applications/home/templates/base.html:235
+#: applications/home/templates/base.html:236
 msgid "Search"
 msgstr "Chercher"
 
-#: applications/home/templates/base.html:283
+#: applications/home/templates/base.html:284
 msgid "Reset"
 msgstr "Reset"
+
+#: applications/home/templates/base.html:303
+#: applications/home/templates/base.html:326
+#: applications/home/templates/home/home.html:458
+msgid "Technology used"
+msgstr "Technologie utilisée"
+
+#: applications/home/templates/base.html:305
+#: applications/home/templates/home/home.html:457
+msgid "Design and developing"
+msgstr "Conception et développement"
+
+#: applications/home/templates/base.html:307
+#: applications/home/templates/home/home.html:461
+msgid "Legal warning"
+msgstr "Avertissement légal"
+
+#: applications/home/templates/base.html:307
+#: applications/home/templates/home/home.html:462
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
+
+#: applications/home/templates/base.html:307
+#: applications/home/templates/home/home.html:463
+msgid "Cookies policy"
+msgstr "Politique de cookies"
+
+#: applications/home/templates/base.html:329
+#: applications/home/templates/home/restaurantDetail copy.html:58
+#: applications/home/templates/home/restaurantDetail.html:61
+#: applications/home/templates/home/table.html:25
+msgid "Web"
+msgstr "Web"
+
+#: applications/home/templates/base.html:330
+msgid "Development framework"
+msgstr "Cadre de développement"
+
+#: applications/home/templates/base.html:331
+msgid "Programming language"
+msgstr "Langage de programmation"
+
+#: applications/home/templates/base.html:332
+msgid "Design framework"
+msgstr "Cadre de conception"
+
+#: applications/home/templates/base.html:333
+msgid "Library for maps"
+msgstr "Bibliothèque de cartes"
+
+#: applications/home/templates/base.html:334
+msgid "Other languages"
+msgstr "Autres langues"
+
+#: applications/home/templates/base.html:337
+msgid "Server"
+msgstr "Serveur"
+
+#: applications/home/templates/base.html:343
+msgid "Code"
+msgstr "Code"
+
+#: applications/home/templates/base.html:349
+#: applications/home/templates/home/restaurantDetail.html:283
+msgid "Close"
+msgstr "Proche"
 
 #: applications/home/templates/home/enlaces.html:17
 #, fuzzy
@@ -242,111 +332,63 @@ msgstr "Reset"
 msgid "Link"
 msgstr "Liens"
 
-#: applications/home/templates/home/home.html:46
+#: applications/home/templates/home/home.html:120
 msgid "Previous"
 msgstr "Précédent"
 
-#: applications/home/templates/home/home.html:50
+#: applications/home/templates/home/home.html:124
 msgid "Next"
 msgstr "Suivant"
 
-#: applications/home/templates/home/home.html:62
+#: applications/home/templates/home/home.html:136
 msgid "Gastronomic opinions with proposals of plans with Nature and Culture"
 msgstr "Avis gastronomiques avec propositions de plans avec Nature et Culture"
 
-#: applications/home/templates/home/home.html:114
-#: applications/home/templates/home/home.html:296
+#: applications/home/templates/home/home.html:188
+#: applications/home/templates/home/home.html:370
 msgid "Price-quality"
 msgstr "Qualité-prix"
 
-#: applications/home/templates/home/home.html:147
-#: applications/home/templates/home/home.html:329
+#: applications/home/templates/home/home.html:221
+#: applications/home/templates/home/home.html:403
 msgid "Service"
 msgstr "Service"
 
-#: applications/home/templates/home/home.html:180
-#: applications/home/templates/home/home.html:362
+#: applications/home/templates/home/home.html:254
+#: applications/home/templates/home/home.html:436
 #: applications/home/templates/home/opinion.html:144
 #: applications/home/templates/home/restaurantDetail.html:244
 msgid "Food"
 msgstr "Aliments"
 
-#: applications/home/templates/home/home.html:182
+#: applications/home/templates/home/home.html:256
+#: applications/home/templates/home/home.html:443
 msgid "More comments"
 msgstr "Plus de commentaires"
 
-#: applications/home/templates/home/home.html:237
+#: applications/home/templates/home/home.html:311
 msgid "Gastronomy + Nature"
 msgstr "Gastronomie + Nature"
 
-#: applications/home/templates/home/home.html:244
+#: applications/home/templates/home/home.html:318
 msgid "Gastronomy + Culture"
 msgstr "Gastronomie + Culture"
 
-#: applications/home/templates/home/home.html:259
+#: applications/home/templates/home/home.html:333
 msgid "Gastronomy + NATURE + CULTURE"
 msgstr "Gastronomie + NATURE + CULTURE"
 
-#: applications/home/templates/home/home.html:364
+#: applications/home/templates/home/home.html:438
 #: applications/home/templates/home/opinion.html:146
 #: applications/home/templates/home/planNature.html:145
 msgid "Nature"
 msgstr "La nature"
 
-#: applications/home/templates/home/home.html:366
+#: applications/home/templates/home/home.html:440
 #: applications/home/templates/home/opinion.html:148
 #: applications/home/templates/home/planCulture.html:148
 msgid "Culture"
 msgstr "Culture"
-
-#: applications/home/templates/home/home.html:369
-msgid "More opinions"
-msgstr "Plus d'avis"
-
-#: applications/home/templates/home/home.html:383
-msgid "Design and developing"
-msgstr "Conception et développement"
-
-#: applications/home/templates/home/home.html:384
-#: applications/home/templates/home/home.html:402
-msgid "Technology used"
-msgstr "Technologie utilisée"
-
-#: applications/home/templates/home/home.html:405
-#: applications/home/templates/home/restaurantDetail copy.html:58
-#: applications/home/templates/home/restaurantDetail.html:61
-#: applications/home/templates/home/table.html:25
-msgid "Web"
-msgstr "Web"
-
-#: applications/home/templates/home/home.html:406
-msgid "Development framework"
-msgstr "Cadre de développement"
-
-#: applications/home/templates/home/home.html:407
-msgid "Programming language"
-msgstr "Langage de programmation"
-
-#: applications/home/templates/home/home.html:408
-msgid "Design framework"
-msgstr "Cadre de conception"
-
-#: applications/home/templates/home/home.html:409
-msgid "Library for maps"
-msgstr "Bibliothèque de cartes"
-
-#: applications/home/templates/home/home.html:410
-msgid "Other languages"
-msgstr "Autres langues"
-
-#: applications/home/templates/home/home.html:413
-msgid "Server"
-msgstr "Serveur"
-
-#: applications/home/templates/home/home.html:421
-#: applications/home/templates/home/restaurantDetail.html:283
-msgid "Close"
-msgstr "Proche"
 
 #: applications/home/templates/home/opinion.html:26
 #: applications/home/templates/home/restaurantDetail copy.html:121
@@ -488,6 +530,9 @@ msgstr "EU"
 #: gastrogune/settings.py:147
 msgid "FR"
 msgstr "FR"
+
+#~ msgid "More opinions"
+#~ msgstr "Plus d'avis"
 
 #, fuzzy
 #~| msgid "Web"

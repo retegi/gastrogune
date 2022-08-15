@@ -151,7 +151,7 @@
               <div class="row">
                 <h1 class="text-center mb-5">{% trans 'Comments' %}</h1>
                   {% for comment in comment %}
-                  <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                  <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
                     <a style="text-decoration: none;" href="{% url 'restaurantDetail' comment.rest.id %}"><h3 style="color:brown"><b>{{ comment.rest }}</b> ( {{ comment.rest.municipality }} )</h3></a>
                     <p>{{ comment.text }} ( {{ comment.author }} )<br><br>
                       <!--QualityPrice-->
@@ -333,7 +333,7 @@
               <h1 class="text-center mb-5" style="color:brown;">{% trans 'Gastronomy + NATURE + CULTURE' %}</h1>
               
                 {% for comment in comment %}
-                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
                   <a style="text-decoration: none;" href="{% url 'restaurantDetail' comment.rest.id %}"><h3 style="color:brown"><b>{{ comment.rest }}</b> ( {{ comment.rest.municipality }} )</h3></a>
                   <p>{{ comment.text }} ( {{ comment.author }} )<br><br>
                     <!--QualityPrice-->
@@ -440,7 +440,7 @@
                     <label style="color:brown;"><b>{% trans 'Culture' %}</b></label><br>
                     {{ comment.complementCulturePlan }}<br><br>
                   </p>
-                  <a href="{% url 'restaurantDetail' comment.rest.id %}"><button class="btn btn-sm" style="background-color:brown; color:white;">{% trans 'More opinions' %}</button></a>
+                  <a href="{% url 'restaurantDetail' comment.rest.id %}"><button class="btn btn-sm" style="background-color:brown; color:white;">{% trans 'More comments' %}</button></a>
                 </div>
                 {% endfor %}
             </div>
@@ -470,37 +470,6 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        
-      </div>
-      <div class="modal-body text-center">
-        <h5 class="modal-title" id="exampleModalLabel">{% trans 'Technology used' %}</h5><br>
-        <ul class="list-group border-0">
-          <li class="list-group-item border-0"></li>
-          <li class="list-group-item border-0"><b>{% trans 'Web' %}</b></li>
-          <li class="list-group-item border-0">{% trans 'Development framework' %}: Django</li>
-          <li class="list-group-item border-0">{% trans 'Programming language' %}: Python</li>
-          <li class="list-group-item border-0">{% trans 'Design framework' %}: Bootstrap</li>
-          <li class="list-group-item border-0">{% trans 'Library for maps' %}: Leaflet</li>
-          <li class="list-group-item border-0">{% trans 'Other languages' %}: Javascript, HTML, CSS</li>
-          <li class="list-group-item border-0"></li>
-          <li class="list-group-item border-0"></li>
-          <li class="list-group-item border-0"><b>{% trans 'Server' %}:</b></li>
-          <li class="list-group-item border-0">Ubuntu Serve 20.04LTS</li>
-          <li class="list-group-item border-0">Gunicorn</li>
-          <li class="list-group-item border-0">NGINX</li>
-        </ul>
-        <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 {% endblock %}

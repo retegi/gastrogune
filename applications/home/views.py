@@ -576,3 +576,16 @@ def post_detailview(request, id):
       }
     return render(request, 'socio/_detail.html', context)
 
+
+
+
+class LegalWarningView(TemplateView):
+    template_name = "home/legal_warning.html"
+
+class PrivacyPolicyView(TemplateView):
+    template_name = "home/privacy_policy.html"
+
+class CookiesPolicyView(TemplateView):
+    template_name = "home/cookies_policy.html"
+
+

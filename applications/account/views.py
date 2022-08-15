@@ -137,30 +137,6 @@ def password_recover(request): #Antes se llamaba register_user
         if form.is_valid():
             print("Validado")
 
-            """form.save()
-            username = form.cleaned_data['username']"""
-            """email = form.cleaned_data['email']           
-            activation_key = str(randint(0,10000))
-            print(activation_key)         
-            key_expires = datetime.now()
-
-            #Obtener el nombre de usuario y guardar estado inactivo
-            user=User.objects.get(username=username)
-            user.is_active = False
-            user.save()
-
-            # Crear el perfil del usuario                                                                                                                                 
-            new_profile = Profile(user=user, activation_key=activation_key, key_expires=key_expires)
-            new_profile.save()
-
-            # Enviar un email de confirmación
-            email_subject = 'Confirmación de registro de usuario / Erabiltzaile berriaren ziurtapena'
-            email_body = "Hola %s, pulsa sobre el siguiente enlace para activar tu cuenta de usuario: http://127.0.0.1:8000/account/accounts/confirm/%s" % (username, activation_key)
-
-            send_mail(email_subject, email_body, 'info@gastrogune.eus',
-                [email], fail_silently=False)
-            #return HttpResponseRedirect('registration/email_confirmacion_enviado.html')
-            return render(request,'registration/password_reset_email.html')"""
             data = form.cleaned_data['email']
             associated_users = User.objects.filter(Q(email=data))
             if associated_users.exists():
