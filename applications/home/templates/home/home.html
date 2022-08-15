@@ -143,11 +143,11 @@
     <div class="col-lg-8 col-md-12">
         <div class="row">
 
-            <div class="col-lg-6 col-md-12 p-5" style="background-color: #fff9f3">
+            <div class="col-xl-6 col-lg-12 col-md-12 p-5" style="background-color: #fff9f3">
               <a href="{% url 'mapEuskadi' %}"><img class="w-100" src="{% static 'img/map.png' %}"></a>
             </div>
 
-            <div class="col-lg-6 col-md-12 p-5" style="background-color: #fff9f3">
+            <div class="col-xl-6 col-lg-12 col-md-12 p-5" style="background-color: #fff9f3">
               <div class="row">
                 <h1 class="text-center mb-5">{% trans 'Comments' %}</h1>
                   {% for comment in comment %}
@@ -333,7 +333,7 @@
               <h1 class="text-center mb-5" style="color:brown;">{% trans 'Gastronomy + NATURE + CULTURE' %}</h1>
               
                 {% for comment in comment %}
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-3">
                   <a style="text-decoration: none;" href="{% url 'restaurantDetail' comment.rest.id %}"><h3 style="color:brown"><b>{{ comment.rest }}</b> ( {{ comment.rest.municipality }} )</h3></a>
                   <p>{{ comment.text }} ( {{ comment.author }} )<br><br>
                     <!--QualityPrice-->
