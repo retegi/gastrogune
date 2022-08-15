@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-15 18:25+0200\n"
+"POT-Creation-Date: 2022-08-15 20:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,12 +20,10 @@ msgstr ""
 
 #: applications/account/templates/registration/confirm_expired.html:11
 msgid "The confirmation email has expired, you must register again."
-msgstr ""
-"Zure baieztapen emaila erabiltzeko epea amaitu da, erabiltzaile berria sortu "
-"behar duzu."
+msgstr "Zure baieztapen emaila erabiltzeko epea amaitu da, erabiltzaile berria sortu behar duzu."
 
 #: applications/account/templates/registration/contactar.html:11
-#: applications/home/templates/base.html:205
+#: applications/home/templates/base.html:206
 #: applications/home/templates/home/contact.html:13
 msgid "Contact"
 msgstr "Kontaktatu"
@@ -78,7 +76,7 @@ msgid "log-in again"
 msgstr "saioa hasi berriz ere"
 
 #: applications/account/templates/registration/login.html:12
-#: applications/home/templates/base.html:280
+#: applications/home/templates/base.html:281
 #: applications/home/templates/home/restaurantDetail.html:297
 #: applications/home/templates/home/restaurantDetail.html:303
 msgid "Login"
@@ -98,7 +96,7 @@ msgstr ""
 #: applications/account/templates/registration/login.html:18
 #: applications/account/templates/registration/password_reset_form.html:18
 #: applications/account/templates/registration/recuperar_password.html:18
-#: applications/home/templates/base.html:281
+#: applications/home/templates/base.html:282
 #: applications/home/templates/home/restaurantDetail.html:304
 msgid "Register"
 msgstr "Erregistratu"
@@ -151,7 +149,7 @@ msgstr "Ez baduzu mezu elektronikorik jasotzen, mesedez, ziurtatu"
 
 #: applications/account/templates/registration/password_reset_form.html:15
 msgid "There is no user with the indicated email."
-msgstr ""
+msgstr "Ez dago adierazitako posta elektronikoa duen erabiltzailerik."
 
 #: applications/account/templates/registration/password_reset_form.html:18
 #, fuzzy
@@ -201,89 +199,90 @@ msgstr "Erabili ondorengo formularioa izena emateko"
 msgid "User registration confirmed successfully."
 msgstr "Erabiltzaileen erregistroa behar bezala berretsi da."
 
-#: applications/home/templates/base.html:127
+#: applications/home/templates/base.html:128
 msgid "Maps"
 msgstr "Mapak"
 
-#: applications/home/templates/base.html:136
+#: applications/home/templates/base.html:137
 #: applications/home/templates/home/home.html:274
 msgid "Restaurants"
 msgstr "Jatetxeak"
 
-#: applications/home/templates/base.html:145
+#: applications/home/templates/base.html:146
 #: applications/home/templates/home/home.html:281
 msgid "Cider houses"
 msgstr "Sagardotegiak"
 
-#: applications/home/templates/base.html:154
+#: applications/home/templates/base.html:155
 #: applications/home/templates/home/home.html:293
 msgid "Cellars"
 msgstr "Upeltegiak"
 
-#: applications/home/templates/base.html:163
+#: applications/home/templates/base.html:164
 #: applications/home/templates/home/home.html:287
 msgid "Grills"
 msgstr "Erretegiak"
 
-#: applications/home/templates/base.html:172
+#: applications/home/templates/base.html:173
 msgid "Plans"
 msgstr "Planak"
 
-#: applications/home/templates/base.html:174
+#: applications/home/templates/base.html:175
 msgid "Gastronomy and NATURE"
 msgstr "Gastronomia eta NATURA"
 
-#: applications/home/templates/base.html:175
+#: applications/home/templates/base.html:176
 msgid "Gastronomy and CULTURE"
 msgstr "Gastronomia eta KULTURA"
 
-#: applications/home/templates/base.html:179
+#: applications/home/templates/base.html:180
 #: applications/home/templates/home/home.html:152
 msgid "Comments"
 msgstr "Iruzkinak"
 
-#: applications/home/templates/base.html:182
+#: applications/home/templates/base.html:183
 #: applications/home/templates/home/table.html:12
 msgid "Table"
 msgstr "Taula"
 
-#: applications/home/templates/base.html:188
+#: applications/home/templates/base.html:189
 #: applications/home/templates/home/enlaces.html:14
 msgid "Links"
 msgstr "Estekak"
 
-#: applications/home/templates/base.html:236
+#: applications/home/templates/base.html:237
 msgid "Search"
 msgstr "Bilatu"
 
-#: applications/home/templates/base.html:284
+#: applications/home/templates/base.html:285
 msgid "Reset"
 msgstr "Berrabiarazi"
 
 # msgid "More comments"
 # msgstr "Iruzkin gehiago"
-#: applications/home/templates/base.html:303
-#: applications/home/templates/base.html:326
+#: applications/home/templates/base.html:304
+#: applications/home/templates/base.html:325
 #: applications/home/templates/home/home.html:458
 msgid "Technology used"
 msgstr "Erabilitako teknologia"
 
-#: applications/home/templates/base.html:305
+#: applications/home/templates/base.html:306
 #: applications/home/templates/home/home.html:457
 msgid "Design and developing"
 msgstr "Diseinua eta garapena"
 
-#: applications/home/templates/base.html:307
+#: applications/home/templates/base.html:308
 #: applications/home/templates/home/home.html:461
 msgid "Legal warning"
 msgstr "Lege abisua"
 
-#: applications/home/templates/base.html:307
+#: applications/home/templates/base.html:308
 #: applications/home/templates/home/home.html:462
 msgid "Privacy policy"
 msgstr "Pribatutasun politika"
 
-#: applications/home/templates/base.html:307
+#: applications/home/templates/base.html:308
+#: applications/home/templates/home/cookies_policy.html:5
 #: applications/home/templates/home/home.html:463
 msgid "Cookies policy"
 msgstr "Cookien politika"
@@ -320,10 +319,26 @@ msgid "Server"
 msgstr "Zerbitzaria"
 
 #: applications/home/templates/base.html:343
+msgid "Source of information"
+msgstr "Informazio iturria"
+
+#: applications/home/templates/base.html:347
 msgid "Code"
 msgstr "Kodea"
 
-#: applications/home/templates/base.html:349
+#: applications/home/templates/base.html:351
+#, fuzzy
+#| msgid "Other languages"
+msgid "Languages"
+msgstr "Beste lengoaiak"
+
+#: applications/home/templates/base.html:355
+#, fuzzy
+#| msgid "Development framework"
+msgid "Developer"
+msgstr "Programazio frameworka"
+
+#: applications/home/templates/base.html:361
 #: applications/home/templates/home/restaurantDetail.html:283
 msgid "Close"
 msgstr "Itxi"

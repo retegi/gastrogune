@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-15 18:25+0200\n"
+"POT-Creation-Date: 2022-08-15 20:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "The confirmation email has expired, you must register again."
 msgstr "The confirmation email has expired, you must register again."
 
 #: applications/account/templates/registration/contactar.html:11
-#: applications/home/templates/base.html:205
+#: applications/home/templates/base.html:206
 #: applications/home/templates/home/contact.html:13
 msgid "Contact"
 msgstr "Contact"
@@ -74,7 +74,7 @@ msgid "log-in again"
 msgstr "log-in again"
 
 #: applications/account/templates/registration/login.html:12
-#: applications/home/templates/base.html:280
+#: applications/home/templates/base.html:281
 #: applications/home/templates/home/restaurantDetail.html:297
 #: applications/home/templates/home/restaurantDetail.html:303
 msgid "Login"
@@ -93,7 +93,7 @@ msgstr ""
 #: applications/account/templates/registration/login.html:18
 #: applications/account/templates/registration/password_reset_form.html:18
 #: applications/account/templates/registration/recuperar_password.html:18
-#: applications/home/templates/base.html:281
+#: applications/home/templates/base.html:282
 #: applications/home/templates/home/restaurantDetail.html:304
 msgid "Register"
 msgstr "Register"
@@ -145,7 +145,7 @@ msgstr "If you don`t receive an email, please make sure you"
 
 #: applications/account/templates/registration/password_reset_form.html:15
 msgid "There is no user with the indicated email."
-msgstr ""
+msgstr "There is no user with the indicated email."
 
 #: applications/account/templates/registration/password_reset_form.html:18
 #, fuzzy
@@ -194,89 +194,90 @@ msgstr "Use the following form to register"
 msgid "User registration confirmed successfully."
 msgstr "User registration confirmed successfully."
 
-#: applications/home/templates/base.html:127
+#: applications/home/templates/base.html:128
 msgid "Maps"
 msgstr "Maps"
 
-#: applications/home/templates/base.html:136
+#: applications/home/templates/base.html:137
 #: applications/home/templates/home/home.html:274
 msgid "Restaurants"
 msgstr "Restaurants"
 
-#: applications/home/templates/base.html:145
+#: applications/home/templates/base.html:146
 #: applications/home/templates/home/home.html:281
 msgid "Cider houses"
 msgstr "Cider houses"
 
-#: applications/home/templates/base.html:154
+#: applications/home/templates/base.html:155
 #: applications/home/templates/home/home.html:293
 msgid "Cellars"
 msgstr "Cellars"
 
-#: applications/home/templates/base.html:163
+#: applications/home/templates/base.html:164
 #: applications/home/templates/home/home.html:287
 msgid "Grills"
 msgstr "Grills"
 
-#: applications/home/templates/base.html:172
+#: applications/home/templates/base.html:173
 #, fuzzy
 #| msgid "Planes"
 msgid "Plans"
 msgstr "Plans"
 
-#: applications/home/templates/base.html:174
+#: applications/home/templates/base.html:175
 msgid "Gastronomy and NATURE"
 msgstr "Gastronomy and NATURE"
 
-#: applications/home/templates/base.html:175
+#: applications/home/templates/base.html:176
 msgid "Gastronomy and CULTURE"
 msgstr "Gastronomy and CULTURE"
 
-#: applications/home/templates/base.html:179
+#: applications/home/templates/base.html:180
 #: applications/home/templates/home/home.html:152
 msgid "Comments"
 msgstr "Comments"
 
-#: applications/home/templates/base.html:182
+#: applications/home/templates/base.html:183
 #: applications/home/templates/home/table.html:12
 msgid "Table"
 msgstr "Table"
 
-#: applications/home/templates/base.html:188
+#: applications/home/templates/base.html:189
 #: applications/home/templates/home/enlaces.html:14
 msgid "Links"
 msgstr "Links"
 
-#: applications/home/templates/base.html:236
+#: applications/home/templates/base.html:237
 msgid "Search"
 msgstr "Search"
 
-#: applications/home/templates/base.html:284
+#: applications/home/templates/base.html:285
 msgid "Reset"
 msgstr "Reset"
 
-#: applications/home/templates/base.html:303
-#: applications/home/templates/base.html:326
+#: applications/home/templates/base.html:304
+#: applications/home/templates/base.html:325
 #: applications/home/templates/home/home.html:458
 msgid "Technology used"
 msgstr "Technology used"
 
-#: applications/home/templates/base.html:305
+#: applications/home/templates/base.html:306
 #: applications/home/templates/home/home.html:457
 msgid "Design and developing"
 msgstr "Design and developing"
 
-#: applications/home/templates/base.html:307
+#: applications/home/templates/base.html:308
 #: applications/home/templates/home/home.html:461
 msgid "Legal warning"
 msgstr "Legal warning"
 
-#: applications/home/templates/base.html:307
+#: applications/home/templates/base.html:308
 #: applications/home/templates/home/home.html:462
 msgid "Privacy policy"
 msgstr "Privacy policy"
 
-#: applications/home/templates/base.html:307
+#: applications/home/templates/base.html:308
+#: applications/home/templates/home/cookies_policy.html:5
 #: applications/home/templates/home/home.html:463
 msgid "Cookies policy"
 msgstr "Cookies policy"
@@ -313,10 +314,26 @@ msgid "Server"
 msgstr "Server"
 
 #: applications/home/templates/base.html:343
+msgid "Source of information"
+msgstr "Source of information"
+
+#: applications/home/templates/base.html:347
 msgid "Code"
 msgstr "Code"
 
-#: applications/home/templates/base.html:349
+#: applications/home/templates/base.html:351
+#, fuzzy
+#| msgid "Other languages"
+msgid "Languages"
+msgstr "Other languages"
+
+#: applications/home/templates/base.html:355
+#, fuzzy
+#| msgid "Development framework"
+msgid "Developer"
+msgstr "Development framework"
+
+#: applications/home/templates/base.html:361
 #: applications/home/templates/home/restaurantDetail.html:283
 msgid "Close"
 msgstr "Close"
