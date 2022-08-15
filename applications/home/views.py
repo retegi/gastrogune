@@ -64,7 +64,8 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['marks'] = Marker.objects.all()
-        context['comment'] = Comment.objects.all()[:8]
+        context['comment'] = Comment.objects.order_by('-id')[:4]
+        context['comment2'] = Comment.objects.order_by('-id')[:8]
         context['videoNum'] = str(random.randrange(0, 9))
         numero = context['videoNum']
         print(numero)
