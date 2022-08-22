@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-15 20:23+0200\n"
+"POT-Creation-Date: 2022-08-22 22:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -140,7 +140,8 @@ msgstr ""
 
 #: applications/account/templates/registration/password_reset_done.html:8
 msgid "We have emailed you instructions for setting your password."
-msgstr "Te hemos enviado los pasos a seguir para restablecer una nueva contraseña."
+msgstr ""
+"Te hemos enviado los pasos a seguir para restablecer una nueva contraseña."
 
 #: applications/account/templates/registration/password_reset_done.html:9
 msgid "If you don`t receive an email, please make sure you"
